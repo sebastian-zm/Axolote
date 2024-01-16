@@ -19,13 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="funtzioak.c" />
     <ClCompile Include="init_screen.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="mugimendua.c" />
     <ClCompile Include="scene2.c" />
     <ClCompile Include="scene_handler.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="funtzioak.h" />
     <ClInclude Include="init_screen.h" />
+    <ClInclude Include="mugimendua.h" />
     <ClInclude Include="scene2.h" />
     <ClInclude Include="scene_handler.h" />
   </ItemGroup>

@@ -24,6 +24,12 @@
     <ClInclude Include="scene2.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="funtzioak.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="mugimendua.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -36,6 +42,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="scene2.c">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="funtzioak.c">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="mugimendua.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,6 +1,8 @@
 // init_screen.c
-#include "init_screen.h"
+#include "scene_handler.h"
+#include <SDL_image.h>
 #include <stdio.h>
+#include "scene2.h"
 
 void Hasieratu(SDL_Window** lehioa, SDL_Surface** superficie) {
     SDL_Init(SDL_INIT_VIDEO);

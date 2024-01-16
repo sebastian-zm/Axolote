@@ -1,9 +1,9 @@
 #include "scene_handler.h"
 #include <SDL_image.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 #include "scene2.h"
-
-
 
 void clickeventua(SDL_Event* eventoa, enum Pantaila* ikusi_pantailan) {
     if (eventoa->type == SDL_MOUSEBUTTONDOWN) {
@@ -25,11 +25,12 @@ void clickeventua(SDL_Event* eventoa, enum Pantaila* ikusi_pantailan) {
     }
 }
 
-void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila ikusi_pantaila) {
+void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila ikusi_pantaila)
+{
     SDL_FillRect(superficie, NULL, 0x000000);
 
     if (ikusi_pantaila == PANTAILA1) {
-        SDL_Surface* background = IMG_Load("C:/Users/Oihane/OneDrive/Escritorio/pixil-frame-0.png");
+        SDL_Surface* background = IMG_Load("C:/Users/leire/Desktop/program/img/hasiera.png");
         if (background == NULL) {
             printf("Ezin da backgrounda ikusi: %s\n", IMG_GetError());
             exit(1);
@@ -45,13 +46,16 @@ void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila i
     }
     else if (ikusi_pantaila == JOKUPANTAILA) {
         // Llamada a la función scene2() que está en scene2.c
-        scene2(lehioa, superficie);
+        maparenEszena(lehioa, superficie);
     }
-    else if (ikusi_pantaila == SCENE3) {
-        SDL_FillRect(superficie, NULL, 0xFF00FF);  // Fondo magenta
+    else if (ikusi_pantaila == SCENE3)
+    {
+        atzekoPlanoaAldatu("C:/Users/leire/Desktop/program/img/help.png", superficie, lehioa);
     }
     else if (ikusi_pantaila == SCENE4) {
-        SDL_FillRect(superficie, NULL, 0x0000FF);  // Fondo azul
+        SDL_DestroyWindow(lehioa);
+        SDL_Quit();
+        return 0;
     }
 }
 

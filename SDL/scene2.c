@@ -1,109 +1,116 @@
-// scene2.c
-#include "scene_handler.h"
+#include <SDL.h>
 #include <SDL_image.h>
 #include <stdio.h>
+#include "scene2.h"
 
-#define ZNBKI_PERTSONAIAK 2  // Define el número de imágenes de personajes
-const char* pertsonaiak_arraia[ZNBKI_PERTSONAIAK] = {
-    "C:/Users/Oihane/OneDrive/Escritorio/oinez.png",
-    "C:/Users/Oihane/OneDrive/Escritorio/oinezx3.png",  
-};
+SDL_Surface* initScene(SDL_Window* lehioa, int* lehiozabalera, int* lehioaltuera) {
 
-void scene2(SDL_Window* lehioa, SDL_Surface* superficie) {
-    int currentCharacterIndex = 0;  // Índice de la imagen de personaje actual
+    SDL_GetWindowSize(lehioa, lehiozabalera, lehioaltuera);
 
-    SDL_FillRect(superficie, NULL, 0x000000);
-    // SDL_FillRect --> bete kolore batekin superperficiea, gure kasua, superficie
-    // NULL--> toda la superficie
-
-    // Cargar la imagen de fondo
-    SDL_Surface* background = IMG_Load("C:/Users/Oihane/OneDrive/Escritorio/fondp.jpg");
-    if (!background) {
-        printf("Ezin da argazkiak kargau %s\n", IMG_GetError());
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+        printf("Error al inicializar SDL: %s\n", SDL_GetError());
         return;
     }
 
-    // Obtener el tamaño de la ventana
-    int lehiozabalera, lehioaltuera;
-    SDL_GetWindowSize(lehioa, &lehiozabalera, &lehioaltuera);
-
-    // Escalar la imagen de fondo al tamaño de la ventana
-    SDL_Surface* backgroundSurface = SDL_CreateRGBSurface(0, lehiozabalera, lehioaltuera, 32, 0, 0, 0, 0);
-    SDL_BlitScaled(background, NULL, backgroundSurface, NULL);
-    SDL_FreeSurface(background);
-
-    // Cargar la imagen del personaje inicial
-    SDL_Surface* pertsonaia_argazkia = IMG_Load(pertsonaiak_arraia[currentCharacterIndex]);
-    if (!pertsonaia_argazkia) {
-        printf("Ezin da argazkiak kargau: %s\n", IMG_GetError());
-        SDL_FreeSurface(backgroundSurface);
+    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG) {
+        printf("Error al inicializar SDL_image: %s\n", IMG_GetError());
+        SDL_Quit();
         return;
     }
 
-    int pertsonai_xpos = 100;  // Coordenada x deseada
-    int pertsonai_ypos = 150;  // Coordenada y deseada
-    int pertsonai_zabalera = 50; // Ancho deseado
-    int pertsonai_altuera = 50;// Altura deseada
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
 
-    SDL_Rect pertsonaia = { pertsonai_xpos, pertsonai_ypos, pertsonai_zabalera, pertsonai_altuera };
+        printf("Error al inicializar SDL: %s\n", SDL_GetError());
+        return;
+    }
 
+    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG) {
+        printf("Error al inicializar SDL_image: %s\n", IMG_GetError());
+        SDL_Quit();
+        return;
+    }
 
-    SDL_Event e;
-    int quit = 0;
+    SDL_Surface* backgroundSurface = IMG_Load("C:/Users/leire/Desktop/program/img/mapa.png");
+    if (!backgroundSurface) {
+        printf("Ezin da atzeko argazkia kargatu: %s\n", IMG_GetError());
+        return NULL;
+    }
 
-    while (!quit) {
-        while (SDL_PollEvent(&e) != 0) {
-            if (e.type == SDL_QUIT){//x-ri ematen badio quit=1 orduan bukleik jun 
-                quit = 1;
-            }
-            else if (e.type == SDL_KEYDOWN) {// ebentua teklatuana bada.
-                switch (e.key.keysym.sym) {
-                case SDLK_w:// erabiltzaileak w sakatu badu. 
-                    if (pertsonaia.y - 10 >= 0) {
-                        pertsonaia.y -= 10;
-                    }
-                    break;
-                case SDLK_a:
-                    if (pertsonaia.x - 10 >= 0) {
-                        pertsonaia.x -= 10;
-                    }
-                    break;
-                case SDLK_s:
-                    if (pertsonaia.y + 10 <= lehioaltuera - pertsonaia.h) {
-                        pertsonaia.y += 10;
-                    }
-                    break;
-                case SDLK_d:
-                    if (pertsonaia.x + 10 <= lehiozabalera - pertsonaia.w) {
-                        pertsonaia.x += 10;
-                    }
-                    break;
-                }
+    SDL_Surface* scaledBackgroundSurface = SDL_CreateRGBSurface(0, *lehiozabalera, *lehioaltuera, 32, 0, 0, 0, 0);
+    SDL_FillRect(scaledBackgroundSurface, NULL, SDL_MapRGBA(scaledBackgroundSurface->format, 0, 0, 0, 0));
+    SDL_BlitScaled(backgroundSurface, NULL, scaledBackgroundSurface, NULL);
+    SDL_FreeSurface(backgroundSurface);
 
-                // Cambiar al siguiente personaje cada vez que se presiona una tecla
-                currentCharacterIndex = (currentCharacterIndex + 1) % ZNBKI_PERTSONAIAK;
+    return scaledBackgroundSurface;
+}
 
-                // Liberar la imagen de personaje actual y cargar la nueva
-                SDL_FreeSurface(pertsonaia_argazkia);
-                pertsonaia_argazkia = IMG_Load(pertsonaiak_arraia[currentCharacterIndex]);
-                if (!pertsonaia_argazkia) {
-                    printf("Error al cargar la nueva imagen del personaje! IMG_Error: %s\n", IMG_GetError());
-                    SDL_FreeSurface(backgroundSurface);
+void MunduAldaketa(SDL_Window* lehioa, SDL_Surface* superficie, SDL_Rect* pertsonaia, int kanpo, const Uint8* keyboardState)
+{
+    if (pertsonaia->x >= 100 && pertsonaia->x <= 385 && pertsonaia->y >= 0 && pertsonaia->y <= 50)
+    {
+        iparPoloa(lehioa, superficie, keyboardState);
+        kanpo = 1;
+    }
+    else if (pertsonaia->x >= -1 && pertsonaia->x <= 20 && pertsonaia->y <= 355 && pertsonaia->y >= 150)
+    {
+        ibaia(lehioa, superficie, keyboardState);
+        kanpo = 1;
+    }
+    else if (pertsonaia->x >= 500 && pertsonaia->x <= 600 && pertsonaia->y >= 155 && pertsonaia->y <= 390)
+    {
+        itsasoa(lehioa, superficie, keyboardState);
+        kanpo = 1;
+    }
+    else if (pertsonaia->x >= 100 && pertsonaia->x <= 385 && pertsonaia->y >= 400 && pertsonaia->y <= 500)
+    {
+        basoa(lehioa, superficie, keyboardState);
+        kanpo = 1;
+    }
+}
+
+    void maparenEszena(SDL_Window * lehioa, SDL_Surface * superficie)
+    {
+        int i, j;
+        const Uint8* keyboardState = SDL_GetKeyboardState(NULL);
+
+        SDL_Surface* backgroundSuperficie = initScene(lehioa, &lehiozabalera, &lehioaltuera);
+
+        if (!backgroundSuperficie)
+        {
+            return;
+        }
+
+        SDL_Surface* pertsonaia_argazkia[NUM_DIRECCIONES][NUM_IMAGENES];
+        for (i = 0; i < NUM_DIRECCIONES; ++i)
+        {
+            for (j = 0; j < (i % 2 ? NUM_IMAGENES_HORIZONTAL : NUM_IMAGENES_VERTICAL); ++j)
+            {
+                printf("Cargando imagen: %s\n", imagenes[i][j]);
+                pertsonaia_argazkia[i][j] = IMG_Load(imagenes[i][j]);
+                if (!pertsonaia_argazkia[i][j])
+                {
+                    printf("Error al cargar la imagen: %s\n", IMG_GetError());
+                    cleanUp(pertsonaia_argazkia, backgroundSuperficie);
                     return;
                 }
             }
         }
 
-        SDL_FillRect(superficie, NULL, SDL_MapRGB(superficie->format, 0, 0, 0));
-        SDL_BlitSurface(backgroundSurface, NULL, superficie, NULL);
+        while (!kanpo)
+        {
+            pertsonaiaMugitu(lehioa, superficie, &pertsonaia, &bertako_pertsonaia, &bertako_pertsonaia_i, &kanpo, lehiozabalera, lehioaltuera, keyboardState);
+            MunduAldaketa(lehioa, superficie, &pertsonaia, kanpo, keyboardState);
 
-        // Blit la imagen del personaje en la nueva posición
-        SDL_BlitScaled(pertsonaia_argazkia, NULL, superficie, &pertsonaia);
+            SDL_BlitSurface(backgroundSuperficie, NULL, superficie, NULL);
+            SDL_BlitSurface(pertsonaia_argazkia[bertako_pertsonaia][bertako_pertsonaia_i], NULL, superficie, &pertsonaia);
 
-        SDL_UpdateWindowSurface(lehioa);
+            if (kanpo)
+            {
+                cleanUp(pertsonaia_argazkia, backgroundSuperficie);
+                break;  // Salir del bucle cuando kanpo es igual a 1
+            }
+
+            SDL_UpdateWindowSurface(lehioa);
+            SDL_Delay(130);
+        }
     }
-
-    // Liberar recursos
-    SDL_FreeSurface(pertsonaia_argazkia);
-    SDL_FreeSurface(backgroundSurface);
-}
