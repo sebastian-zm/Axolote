@@ -67,6 +67,42 @@ int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia)
 	return ondo;
 }
 
+int DIALOGOAK_arrayInizializatuFitxategitik(struct Dialogo* arr[], int maxLength, int* aukera, FILE* fitxategia)
+{
+	char izena[DIALOGO_MAX_STR_LEN + 1];
+	char dialogoa[DIALOGO_MAX_STR_LEN + 1];
+	char oraingoa;
+
+	DIALOGOAK_lehenKaraktereaHartu(&oraingoa, fitxategia);
+	*aukera = 0;
+
+	int success = 1;
+
+	do
+	{
+		if (oraingoa == '{')
+		{
+			if (*aukera >= maxLength)
+			{
+				success = 0;
+			}
+			else
+			{
+				success = DIALOGOAK_inizializatuFitxategitik(&arr[*aukera], fitxategia);
+				++*aukera;
+			}
+		}
+		else
+		{
+			success = 0;
+		}
+
+		if (success) success = DIALOGOAK_lehenKaraktereaHartu(&oraingoa, fitxategia);
+	} while (oraingoa != ']' && success);
+
+	return success;
+}
+
 int DIALOGOAK_inizializatuFitxategitik(struct Dialogo** dialogo, FILE* fitxategia)
 {
 	char izena[DIALOGO_MAX_STR_LEN + 1] = "";

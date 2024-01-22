@@ -17,6 +17,7 @@
 int DIALOGOAK_karaktereaHartu(char* karakterea, FILE* fitxategia);
 int DIALOGOAK_lehenKaraktereaHartu(char* karakterea, FILE* fitxategia);
 int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia);
+int DIALOGOAK_arrayInizializatuFitxategitik(struct Dialogo* arr[], int maxLength, int* aukera, FILE* fitxategia);
 int DIALOGOAK_inizializatuFitxategitik(struct Dialogo** dialogo, FILE* fitxategia);
 int DIALOGOAK_inizializatuPathBatetik(struct Dialogo** dialogo, char* path);
 
