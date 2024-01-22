@@ -61,6 +61,19 @@ TTF_Font* letraTipoKargatu(int tamaina, char* path)
     return font;
 }
 
+FILE* fitxategiaIrakurtzekoIreki(char* path)
+{
+    char* fullPath = pathAbsolutua(path);
+
+    FILE* fitxategia = fopen(fullPath, "r");
+
+    ERRORIF(!fitxategia, "Ezin izan da fitxategia irakurri. Path: %s", fullPath);
+
+    free(fullPath);
+    
+    return fitxategia;
+}
+
 void pantailaGarbitu(SDL_Renderer* renderer)
 {
     // Marrazteko kolorea beltzera ezarri

@@ -1,0 +1,18 @@
+{
+	< Kaixo, zein zara?
+	{
+		> Kaixo, erreportaia bat egiten ari naiz, eta informazioa behar dut, galdera batzuk erantzun ahal dizkidazu?
+		< Noski! Hartz txuri bat naiz eta Artikoan bizi naiz, zehazki, izotzen estalitako uretan.
+		{
+			> Zein da zuen mehatxu naguesiena?
+			< Kezkatuta nago klima-aldaketagatik. Izotzak urtzen ari dira eta nire habitata suntsitzen. Honen erruz, hiltzen ari gara eta desagertzear gaude.
+			{
+				> Zer pasako litzake espeziea desagertuz gero?
+				< Berotze-globala gero eta handiagoa izango da eta klima-aldaketaren ondorioak mundu osoan areagotuko lirateke.
+				{
+					> Miyesker!
+				}
+			}
+		}
+	}
+}

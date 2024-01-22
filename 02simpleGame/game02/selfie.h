@@ -16,6 +16,7 @@
 
 SDL_Texture* SELFIE_irudiaKargatu(enum Animalia animalia, SDL_Renderer* renderer);
 void SELFIE_goikoSelfieakMarraztu(SDL_Renderer* renderer);
+int SELFIE_eginda(enum Animalia animalia);
 void SELFIE_main(SDL_Renderer* renderer, enum Animalia animalia);
 
 #endif // !SELFIE_H

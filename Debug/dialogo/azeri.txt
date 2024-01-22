@@ -1,0 +1,22 @@
+{
+	< Kaixo, zer nahi duzu?
+	{
+		> Kaixo, erreportai bat naiz, eta informazioa behar dut, galdera batzuk erantzun ahal dizkidazu?
+		< Azari artiko bat naiz eta  Europako iparraldeko, Asiako eta Ipar Amerikako tundretan bizi naiz.
+		{
+			> Zein da zuen arazoa?
+			< Desagertzen ari naiz hamsterren ugalketak gutxitzen ari direlako, horiek izaten baitira gure eguneroko elikadura.
+			{
+				> Mehatsu gehiago badauzkazu?
+				< Azeri arruntak gure habitatarekin gelditzen ari dira ere eta honek ez digu mesederik egiten.
+				{
+					> Nola konponduko zenuke arazoa? Zer egin dezakegu guk zuen espeziea mantentzeko?
+					< Gu salbatzeko hamsterren ugalketa handitzea beharrezkoa da.
+					{
+						> Eskerrikasko!
+					}
+				}
+			}
+		}
+	}
+}

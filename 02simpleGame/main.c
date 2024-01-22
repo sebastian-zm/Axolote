@@ -44,7 +44,7 @@ int main(int argc, char * str[]) {
     }
 
 
-    for (i = 0; i < 8; ++i)
+    for (i = 2; i < 8; ++i)
     {
         DIALOGO_main(i, renderer);
     }
