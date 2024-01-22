@@ -30,11 +30,7 @@ void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila i
     SDL_FillRect(superficie, NULL, 0x000000);
 
     if (ikusi_pantaila == PANTAILA1) {
-        SDL_Surface* background = IMG_Load("C:/Users/leire/Desktop/program/img/hasiera.png");
-        if (background == NULL) {
-            printf("Ezin da backgrounda ikusi: %s\n", IMG_GetError());
-            exit(1);
-        }
+        SDL_Surface* background = irudiaKargatuGainazalera("img/hasiera.png");
 
         int lehioZabalera, lehioAtuera;
         SDL_GetWindowSize(lehioa, &lehioZabalera, &lehioAtuera);
@@ -50,7 +46,7 @@ void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila i
     }
     else if (ikusi_pantaila == SCENE3)
     {
-        atzekoPlanoaAldatu("C:/Users/leire/Desktop/program/img/help.png", superficie, lehioa);
+        atzekoPlanoaAldatu("img/help.png", superficie, lehioa);
     }
     else if (ikusi_pantaila == SCENE4) {
         SDL_DestroyWindow(lehioa);

@@ -13,14 +13,14 @@ SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path)
     SDL_Texture* texture;
     SDL_Surface* surface;
 
-    surface = irudiaKargatuGainazalera(renderer, path);
+    surface = irudiaKargatuGainazalera(path);
     texture = texturaGainazaletik(renderer, surface);
 
     SDL_FreeSurface(surface);
     return texture;
 }
 
-SDL_Surface* irudiaKargatuGainazalera(SDL_Renderer* renderer, char* path)
+SDL_Surface* irudiaKargatuGainazalera(char* path)
 {
     SDL_Surface* surface;
 

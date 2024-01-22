@@ -38,7 +38,7 @@ enum Animalia
 
 
 SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path);
-SDL_Surface* irudiaKargatuGainazalera(SDL_Renderer* renderer, char* path);
+SDL_Surface* irudiaKargatuGainazalera(char* path);
 SDL_Texture* texturaGainazaletik(SDL_Renderer* renderer, SDL_Surface* surface);
 TTF_Font* letraTipoKargatu(int tamaina, char* path);
 FILE* fitxategiaIrakurtzekoIreki(char* path);

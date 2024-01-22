@@ -2,12 +2,13 @@
 #include <SDL_image.h>
 #include <stdio.h>
 #include "funtzioak.h"
+#include "helpers.h"
 
 const char* biomak[NUM_BIOMAK] = {
-    "C:/Users/leire/Desktop/program/img/ibaia.png",
-    "C:/Users/leire/Desktop/program/img/iparpoloa.png",
-    "C:/Users/leire/Desktop/program/img/itsasoa.png",
-    "C:/Users/leire/Desktop/program/img/basoa.jpg"
+    "img/ibaia.png",
+    "img/iparpoloa.png",
+    "img/itsasoa.png",
+    "img/basoa.jpg"
 };
 
 void ibaia(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState)
@@ -144,12 +145,7 @@ void atzekoPlanoaAldatu(const char* imagePath, SDL_Surface* superficie, SDL_Wind
     int lehiozabalera, lehioaltuera;
     SDL_GetWindowSize(lehioa, &lehiozabalera, &lehioaltuera);
 
-    SDL_Surface* backgroundSurface = IMG_Load(imagePath);
-    if (!backgroundSurface)
-    {
-        printf("Ezin da atzeko argazkia kargatu (%s): %s\n", imagePath, IMG_GetError());
-        return;
-    }
+    SDL_Surface* backgroundSurface = irudiaKargatuGainazalera(imagePath);
 
     SDL_Surface* scaledBackgroundSurface = SDL_CreateRGBSurface(0, lehiozabalera, lehioaltuera, 32, 0, 0, 0, 0);
     if (!scaledBackgroundSurface)
@@ -171,13 +167,7 @@ void interrogazioakAzaldu(SDL_Window* lehioa, SDL_Rect rectInterrogazioa1, SDL_R
 {
     SDL_Surface* superficie = SDL_GetWindowSurface(lehioa);
 
-    SDL_Surface* interrogazioa = IMG_Load("C:/Users/leire/Desktop/program/img/animali.png");
-
-    if (!interrogazioa)
-    {
-        printf("Ezin da argazkia kargatu : % s\n", IMG_GetError());
-        return;
-    }
+    SDL_Surface* interrogazioa = irudiaKargatuGainazalera("img/animali.png");
 
     SDL_BlitSurface(interrogazioa, NULL, superficie, &rectInterrogazioa1);
     SDL_BlitSurface(interrogazioa, NULL, superficie, &rectInterrogazioa2);
@@ -469,12 +459,7 @@ void eliminatuInterrogazioa(SDL_Window* lehioa, SDL_Rect rectInterrogazioa)
     SDL_Surface* superficie = SDL_GetWindowSurface(lehioa);
 
     // Cargar la imagen que se usará para tapar la interrogación
-    SDL_Surface* tapaderaSurface = IMG_Load("C:/Users/leire/Desktop/program/img/tick.png");
-    if (!tapaderaSurface)
-    {
-        printf("Ezin da argazkia kargatu : %s\n", IMG_GetError());
-        return;
-    }
+    SDL_Surface* tapaderaSurface = irudiaKargatuGainazalera("img/tick.png");
 
     // Combinar la tapadera con la superficie principal usando SDL_BlitSurface
     SDL_BlitSurface(tapaderaSurface, NULL, superficie, &rectInterrogazioa);
