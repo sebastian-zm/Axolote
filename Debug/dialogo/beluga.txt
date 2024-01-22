@@ -1,8 +1,8 @@
 {
-	< Kaixo! beluga bat naiz eta Artikoko, Alaskako, Kanadako, Errusiako eta Groenlandiako itsasoetan bizi naiz, baina gutxinaka nire espeziea desagertzer ari gara.
+	< Kaixo! beluga bat naiz eta Artikoko, Alaskako, Kanadako, Errusiako eta Groenlandiako itsasoetan bizi naiz, baina gutxinaka nire espeziea desagertzen ari da.
 	{
 		> Zer pasa ote da?
-		< Arrantza masiboagatik eta nire harrapariengatik, hartz polarrak eta orkak nagusiki, desagertzen ari naiz.
+		< Arrantza masiboagatik eta nire harrapariengatik, hartz polarrak eta orkak nagusiki, desagertzen ari dira.
 		{
 			> Baldago nik egin dezakedan ezer?
 			< Ehiza gutxitu beharko zen, baina klima aldaketa eta kutsadura eragin handia dauka. Beraz faktore hauek gutxitzen saiatu.

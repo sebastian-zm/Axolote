@@ -1,5 +1,5 @@
 #include "dialogo.h"
-#include "dialogoak.h"
+#include "dialogoak_kargatu.h"
 #include "dialogo_grafiko.h"
 #include "helpers.h"
 

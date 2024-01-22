@@ -24,7 +24,7 @@
     <ClCompile Include="game02\dialogo_grafiko.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game02\dialogoak.c">
+    <ClCompile Include="game02\dialogoak_kargatu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game02\selfie.c">
@@ -56,7 +56,7 @@
     <ClInclude Include="game02\dialogo_grafiko.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game02\dialogoak.h">
+    <ClInclude Include="game02\dialogoak_kargatu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\selfie.h">

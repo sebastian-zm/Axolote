@@ -21,6 +21,15 @@ void Hasieratu(SDL_Window** lehioa, SDL_Surface** superficie) {
     *superficie = SDL_GetWindowSurface(*lehioa);
     // superficiea sortzen beti lehioa
 
+    // Gero erabili dezakegu SDL_GetRenderer erabilita.
+    SDL_Renderer* renderer = SDL_CreateRenderer(*lehioa, -1, 0);
+    if (!renderer)
+    {
+        fprintf(stderr, "Renderer ez da inizializatu! SDL_Error: %s\n", TTF_GetError());
+        exit(1);
+    }
+
+    // Testua margotzeko liburutegia inizializatu
     if (TTF_Init() < 0)
     {
         fprintf(stderr, "SDL_tff ez da inizializatu! SDL_Error: %s\n", TTF_GetError());

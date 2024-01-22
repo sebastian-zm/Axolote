@@ -155,12 +155,12 @@
     <ClCompile Include="game02\selfie.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="game02\dialogo.c" />
-    <ClCompile Include="game02\dialogoak.c" />
+    <ClCompile Include="game02\dialogoak_kargatu.c" />
     <ClCompile Include="game02\dialogo_grafiko.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game02\dialogo.h" />
-    <ClInclude Include="game02\dialogoak.h" />
+    <ClInclude Include="game02\dialogoak_kargatu.h" />
     <ClInclude Include="game02\dialogo_grafiko.h" />
     <ClInclude Include="game02\funtzioak.h" />
     <ClInclude Include="game02\helpers.h" />

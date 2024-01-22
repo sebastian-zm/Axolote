@@ -1,4 +1,4 @@
-#include "dialogoak.h"
+#include "dialogoak_kargatu.h"
 #include "dialogo.h"
 #include "helpers.h"
 #include <stdio.h>

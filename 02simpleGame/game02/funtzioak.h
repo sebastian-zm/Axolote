@@ -27,6 +27,7 @@ void lemurraHautatuDa(SDL_Window* lehioa);
 void jaguarraHautatuDa(SDL_Window* lehioa);
 void hartzTxuriaHautatuDa(SDL_Window* lehioa);
 void azeriArtikoaHautatuDa(SDL_Window* lehioa);
+void animaliaHautatuDa(enum Animalia animalia, SDL_Window* lehioa);
 
 
 #endif

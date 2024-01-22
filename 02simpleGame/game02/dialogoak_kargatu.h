@@ -1,5 +1,5 @@
-#ifndef DIALOGOAK_H
-#define DIALOGOAK_H
+#ifndef DIALOGOAK_KARGATU_H
+#define DIALOGOAK_KARGATU_H
 
 #include <stdio.h>
 
@@ -30,5 +30,5 @@ void DIALOGO_inizializatuLemur(struct Dialogo** dialogo);
 void DIALOGO_inizializatuAzeriArtiko(struct Dialogo** dialogo);
 void DIALOGO_inizializatuJaguar(struct Dialogo** dialogo);
 
-#endif // !DIALOGOAK_H
+#endif // !DIALOGOAK_KARGATU_H
 

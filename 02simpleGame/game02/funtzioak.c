@@ -280,178 +280,47 @@ void interrogazioeiKlick(SDL_Window* lehioa, SDL_Rect rectInterrogazioa1, SDL_Re
 
 void axoloteHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoAxolote", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-            fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-            SDL_Quit();
-            exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_AXOLOTE, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_AXOLOTE, lehioa);
 }
 
 void belugaHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoBeluga", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_BELUGA, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_BELUGA, lehioa);
 }
 
 void manatiaHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoManatia", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_AMAZONIAR_MANATI, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_AMAZONIAR_MANATI, lehioa);
 }
 
 void baleUrdinaHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoBalea", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_BALE_URDIN, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_BALE_URDIN, lehioa);
 }
 
 void lemurraHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoLemur", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_LEMUR, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_LEMUR, lehioa);
 }
 
 void jaguarraHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoJaguar", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_JAGUAR, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_JAGUAR, lehioa);
 }
 
 void hartzTxuriaHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoHartza", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_HARTZ_TXURI, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    animaliaHautatuDa(ANIMALIA_HARTZ_TXURI, lehioa);
 }
 
 void azeriArtikoaHautatuDa(SDL_Window* lehioa)
 {
-    SDL_Window* window = SDL_CreateWindow("DialogoAzeri", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, SDL_WINDOW_SHOWN);
-    if (!window)
-    {
-        fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    animaliaHautatuDa(ANIMALIA_AZERI_ARTIKO, lehioa);
+}
 
-    if (!renderer)
-    {
-        fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
-        SDL_Quit();
-        exit(1);
-    }
-    DIALOGO_main(ANIMALIA_AZERI_ARTIKO, renderer);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+void animaliaHautatuDa(enum Animalia animalia, SDL_Window* lehioa)
+{
+    DIALOGO_main(animalia, SDL_GetRenderer(lehioa));
 }
 
 void eliminatuInterrogazioa(SDL_Window* lehioa, SDL_Rect rectInterrogazioa)
