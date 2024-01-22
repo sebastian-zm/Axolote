@@ -45,6 +45,9 @@
     <ClCompile Include="game02\scene_handler.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="game02\scene2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game02\dialogo.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\scene_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game02\scene2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

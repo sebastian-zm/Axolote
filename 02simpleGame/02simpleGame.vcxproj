@@ -150,6 +150,7 @@
     <ClCompile Include="game02\helpers.c" />
     <ClCompile Include="game02\init_screen.c" />
     <ClCompile Include="game02\mugimendua.c" />
+    <ClCompile Include="game02\scene2.c" />
     <ClCompile Include="game02\scene_handler.c" />
     <ClCompile Include="game02\selfie.c" />
     <ClCompile Include="main.c" />
@@ -165,6 +166,7 @@
     <ClInclude Include="game02\helpers.h" />
     <ClInclude Include="game02\init_screen.h" />
     <ClInclude Include="game02\mugimendua.h" />
+    <ClInclude Include="game02\scene2.h" />
     <ClInclude Include="game02\scene_handler.h" />
     <ClInclude Include="game02\selfie.h" />
   </ItemGroup>

@@ -30,7 +30,7 @@ SDL_Surface* initScene(SDL_Window* lehioa, int* lehiozabalera, int* lehioaltuera
         return;
     }
 
-    SDL_Surface* backgroundSurface = IMG_Load("C:/Users/leire/Desktop/program/img/mapa.png");
+    SDL_Surface* backgroundSurface = irudiaKargatuGainazalera("img/mapa.png");
     if (!backgroundSurface) {
         printf("Ezin da atzeko argazkia kargatu: %s\n", IMG_GetError());
         return NULL;
@@ -86,7 +86,7 @@ void MunduAldaketa(SDL_Window* lehioa, SDL_Surface* superficie, SDL_Rect* pertso
             for (j = 0; j < (i % 2 ? NUM_IMAGENES_HORIZONTAL : NUM_IMAGENES_VERTICAL); ++j)
             {
                 printf("Cargando imagen: %s\n", imagenes[i][j]);
-                pertsonaia_argazkia[i][j] = IMG_Load(imagenes[i][j]);
+                pertsonaia_argazkia[i][j] = irudiaKargatuGainazalera(imagenes[i][j]);
                 if (!pertsonaia_argazkia[i][j])
                 {
                     printf("Error al cargar la imagen: %s\n", IMG_GetError());

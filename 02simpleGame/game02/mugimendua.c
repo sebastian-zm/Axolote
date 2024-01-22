@@ -9,10 +9,10 @@ int bertako_pertsonaia = 0;
 int bertako_pertsonaia_i = 0;
 int lehiozabalera, lehioaltuera;
 const char* imagenes[NUM_DIRECCIONES][NUM_IMAGENES] = {
-    {"C:/Users/leire/Desktop/program/img/gora1.png", "C:/Users/leire/Desktop/program/img/gora2.png", "C:/Users/leire/Desktop/program/img/gora3.png"},
-    {"C:/Users/leire/Desktop/program/img/ezker.png", "C:/Users/leire/Desktop/program/img/ezker_h.png"},
-    {"C:/Users/leire/Desktop/program/img/aurrera1.png", "C:/Users/leire/Desktop/program/img/aurrera2.png", "C:/Users/leire/Desktop/program/img/aurrera3.png"},
-    {"C:/Users/leire/Desktop/program/img/eskubi.png", "C:/Users/leire/Desktop/program/img/eskubi2.png"}
+    {"img/gora1.png", "img/gora2.png", "img/gora3.png"},
+    {"img/ezker.png", "img/ezker_h.png"},
+    {"img/aurrera1.png", "img/aurrera2.png", "img/aurrera3.png"},
+    {"img/eskubi.png", "img/eskubi2.png"}
 };
 
 void pertsonaiaMugitu(SDL_Window* lehioa, SDL_Surface* superficie, SDL_Rect* pertsonaia, int* bertako_pertsonaia, int* bertako_pertsonaia_i, int* kanpo, int lehiozabalera, int lehioaltuera, const Uint8* keyboardState)
