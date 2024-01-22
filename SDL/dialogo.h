@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <SDL.h>
 #include "helpers.h"
+#include "selfie.h"
 
 #define DIALOGO_MAX_STR_LEN 255
 #define DIALOGO_MAX_AUKERAK 4

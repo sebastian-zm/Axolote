@@ -1,6 +1,8 @@
 // init_screen.c
 #include "scene_handler.h"
 #include <SDL_image.h>
+#include <SDL_ttf.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "scene2.h"
 
@@ -18,4 +20,10 @@ void Hasieratu(SDL_Window** lehioa, SDL_Surface** superficie) {
 
     *superficie = SDL_GetWindowSurface(*lehioa);
     // superficiea sortzen beti lehioa
+
+    if (TTF_Init() < 0)
+    {
+        fprintf(stderr, "SDL_tff ez da inizializatu! SDL_Error: %s\n", TTF_GetError());
+        exit(1);
+    }
 }

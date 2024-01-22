@@ -8,8 +8,6 @@ SDL_Rect pertsonaia = { 100, 150, 50, 50 };  // Ajusta los valores según sea nec
 int bertako_pertsonaia = 0;
 int bertako_pertsonaia_i = 0;
 int lehiozabalera, lehioaltuera;
-
-
 const char* imagenes[NUM_DIRECCIONES][NUM_IMAGENES] = {
     {"C:/Users/leire/Desktop/program/img/gora1.png", "C:/Users/leire/Desktop/program/img/gora2.png", "C:/Users/leire/Desktop/program/img/gora3.png"},
     {"C:/Users/leire/Desktop/program/img/ezker.png", "C:/Users/leire/Desktop/program/img/ezker_h.png"},

@@ -19,19 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dialogo.c" />
+    <ClCompile Include="dialogoak.c" />
+    <ClCompile Include="dialogo_grafiko.c" />
     <ClCompile Include="funtzioak.c" />
+    <ClCompile Include="helpers.c" />
     <ClCompile Include="init_screen.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="mugimendua.c" />
     <ClCompile Include="scene2.c" />
     <ClCompile Include="scene_handler.c" />
+    <ClCompile Include="selfie.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dialogo.h" />
+    <ClInclude Include="dialogoak.h" />
+    <ClInclude Include="dialogo_grafiko.h" />
     <ClInclude Include="funtzioak.h" />
+    <ClInclude Include="helpers.h" />
     <ClInclude Include="init_screen.h" />
     <ClInclude Include="mugimendua.h" />
     <ClInclude Include="scene2.h" />
     <ClInclude Include="scene_handler.h" />
+    <ClInclude Include="selfie.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

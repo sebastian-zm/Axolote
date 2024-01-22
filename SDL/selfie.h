@@ -14,6 +14,7 @@
 #define SELFIE_AZERI_ARTIKO_IRUDIA "img/azeriselfie.png"
 #define SELFIE_JAGUAR_IRUDIA "img/jaguarselfie.png"
 
+int SELFIE_eginda(enum Animalia animalia);
 SDL_Texture* SELFIE_irudiaKargatu(enum Animalia animalia, SDL_Renderer* renderer);
 void SELFIE_goikoSelfieakMarraztu(SDL_Renderer* renderer);
 void SELFIE_main(SDL_Renderer* renderer, enum Animalia animalia);
