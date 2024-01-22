@@ -146,7 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="game02\funtzioak.c" />
     <ClCompile Include="game02\helpers.c" />
+    <ClCompile Include="game02\init_screen.c" />
+    <ClCompile Include="game02\mugimendua.c" />
+    <ClCompile Include="game02\scene_handler.c" />
     <ClCompile Include="game02\selfie.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="game02\dialogo.c" />
@@ -157,7 +161,11 @@
     <ClInclude Include="game02\dialogo.h" />
     <ClInclude Include="game02\dialogoak.h" />
     <ClInclude Include="game02\dialogo_grafiko.h" />
+    <ClInclude Include="game02\funtzioak.h" />
     <ClInclude Include="game02\helpers.h" />
+    <ClInclude Include="game02\init_screen.h" />
+    <ClInclude Include="game02\mugimendua.h" />
+    <ClInclude Include="game02\scene_handler.h" />
     <ClInclude Include="game02\selfie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -33,6 +33,18 @@
     <ClCompile Include="game02\helpers.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="game02\funtzioak.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\init_screen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\mugimendua.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\scene_handler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game02\dialogo.h">
@@ -48,6 +60,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game02\funtzioak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game02\init_screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game02\mugimendua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game02\scene_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

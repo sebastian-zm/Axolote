@@ -1,10 +1,28 @@
-﻿  dialogoak.c
+﻿  funtzioak.c
+  helpers.c
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\funtzioak.c(21,10): warning C4013: 'SELFIE_eginda' sin definir; se supone que extern devuelve como resultado int
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\funtzioak.c(39,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\funtzioak.c(72,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\funtzioak.c(103,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\funtzioak.c(134,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+  init_screen.c
+  mugimendua.c
+  scene_handler.c
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene_handler.c(58,17): warning C4098: 'PantailaBerria': función 'void' que devuelve un valor
+  selfie.c
+  main.c
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\main.c(5,12): warning C4026: función declarada con lista de parámetros formales
+  dialogo.c
+C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogo.c(68,2): warning C4013: 'SELFIE_main' sin definir; se supone que extern devuelve como resultado int
+  dialogoak.c
 C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak.c(53,6): warning C4047: 'inicializando': 'int' es distinto en los niveles de direccionamiento indirecto de 'char *'
+  dialogo_grafiko.c
 C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak.c(64,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak.c(72,7): warning C4101: 'izena': variable local sin referencia
 C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak.c(73,7): warning C4101: 'dialogoa': variable local sin referencia
 C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak.c(130,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\julio\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak.c(135,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  main.c
   Generando código...
-  02simpleGame.vcxproj -> C:\Users\julio\source\repos\sebastian-zm\Axolote\Debug\Dialogo.exe
+  LINK : no se encontró C:\Users\julio\source\repos\sebastian-zm\Axolote\Debug\Dialogo.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+scene_handler.obj : error LNK2019: símbolo externo _maparenEszena sin resolver al que se hace referencia en la función _PantailaBerria
+C:\Users\julio\source\repos\sebastian-zm\Axolote\Debug\Dialogo.exe : fatal error LNK1120: 1 externos sin resolver
