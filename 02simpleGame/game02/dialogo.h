@@ -1,10 +1,14 @@
 #ifndef DIALOGO_H
 #define DIALOGO_H
 
+#include "dialogoak_kargatu.h"
+#include "dialogo_grafiko.h"
+#include "helpers.h"
+
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <SDL.h>
-#include "helpers.h"
 
 #define DIALOGO_MAX_STR_LEN 255
 #define DIALOGO_MAX_AUKERAK 4

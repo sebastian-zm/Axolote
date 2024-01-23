@@ -1,0 +1,14 @@
+﻿  scene2.c
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(9,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(15,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(21,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(27,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(104,68): warning C4020: 'cleanUp': hay demasiados parámetros reales
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(121,159): warning C4020: 'pertsonaiaMugitu': hay demasiados parámetros reales
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(130,68): warning C4020: 'cleanUp': hay demasiados parámetros reales
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(83,53): warning C4101: 'clicEnFlecha': variable local sin referencia
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(169,13): warning C4013: 'PantailaAldaketa' sin definir; se supone que extern devuelve como resultado int
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(42): warning C4715: 'initScene': no todas las rutas de acceso de control devuelven un valor
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(198): warning C4716: 'flechaclick_mapa': debe devolver un valor
+C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(173): warning C4716: 'flechaclick_pantaila1': debe devolver un valor
+  02simpleGame.vcxproj -> C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\Debug\02simpleGame.exe

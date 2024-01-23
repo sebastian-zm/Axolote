@@ -1,0 +1,25 @@
+{
+	< Kaixo! Beluga bat naiz eta Ipar Poloko, Alaskako, Kanadako, Errusiako eta Groenlandiako itsasoetan bizi naiz, baina gutxinaka nire espeziea desagertzen ari da.
+	{
+		> Zer pasatzen ari da?
+		< Arrantza masiboa eta gure harrapariak direla eta, hartz polarrak eta orkak nagusiki, desagertzen ari gara.
+		{
+			> Zer egin dezakegu gizakiok?
+			< Ehiza gutxitutzea komeni da, baina klima aldaketak eta kutsadurak eragin handia dute ere gure bizitzan. Beraz, faktore hauek hobetzen saiatzea eskertuko genuke.
+			{
+				> Mila esker zure espeziearen informazioa partekatzegatik, nire erreportaia askoz ere garatuagoa egongo da!
+				< Erreportaia?
+				{
+					> Ah, ez dizut esan. Erreportai bat egiten ari naiz, kazetaria naiz.
+					< Zorte on zure erreportaiarekin!
+					{
+						> Eskerrik asko! Agur!
+					}
+				}
+			}
+			{
+				> Mila esker!
+			}
+		}
+	}
+}

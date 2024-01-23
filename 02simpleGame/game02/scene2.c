@@ -1,0 +1,198 @@
+#include "scene2.h"
+
+SDL_Surface* initScene(SDL_Window* lehioa, int* lehiozabalera, int* lehioaltuera) {
+
+    SDL_GetWindowSize(lehioa, lehiozabalera, lehioaltuera);
+
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+        printf("Error al inicializar SDL: %s\n", SDL_GetError());
+        return;
+    }
+
+    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG) {
+        printf("Error al inicializar SDL_image: %s\n", IMG_GetError());
+        SDL_Quit();
+        return;
+    }
+
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+
+        printf("Error al inicializar SDL: %s\n", SDL_GetError());
+        return;
+    }
+
+    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG) {
+        printf("Error al inicializar SDL_image: %s\n", IMG_GetError());
+        SDL_Quit();
+        return;
+    }
+
+    SDL_Surface* backgroundSurface = irudiaKargatuGainazalera("img/mapa.png");
+    if (!backgroundSurface) {
+        printf("Ezin da atzeko argazkia kargatu: %s\n", IMG_GetError());
+        return NULL;
+    }
+
+    SDL_Surface* scaledBackgroundSurface = SDL_CreateRGBSurface(0, *lehiozabalera, *lehioaltuera, 32, 0, 0, 0, 0);
+    SDL_FillRect(scaledBackgroundSurface, NULL, SDL_MapRGBA(scaledBackgroundSurface->format, 0, 0, 0, 0));
+    SDL_BlitScaled(backgroundSurface, NULL, scaledBackgroundSurface, NULL);
+    SDL_FreeSurface(backgroundSurface);
+
+    return scaledBackgroundSurface;
+}
+
+void MunduAldaketa(SDL_Window* lehioa, SDL_Surface* superficie, SDL_Rect* pertsonaia, int kanpo, const Uint8* keyboardState, enum Pantaila* ikusi_pantaila)
+{
+    if (pertsonaia->x >= 100 && pertsonaia->x <= 385 && pertsonaia->y >= 0 && pertsonaia->y <= 50)
+    {
+        if (!SELFIE_eginda(ANIMALIA_HARTZ_TXURI) && !SELFIE_eginda(ANIMALIA_AZERI_ARTIKO))
+        {
+            iparPoloa(lehioa, superficie, keyboardState, ikusi_pantaila);;
+        }
+        kanpo = 1;
+
+    }
+    else if (pertsonaia->x >= -1 && pertsonaia->x <= 20 && pertsonaia->y <= 355 && pertsonaia->y >= 150)
+    {
+        if (!SELFIE_eginda(ANIMALIA_AXOLOTE) && !SELFIE_eginda(ANIMALIA_AMAZONIAR_MANATI))
+        {
+            ibaia(lehioa, superficie, keyboardState, ikusi_pantaila);
+        }
+        kanpo = 1;
+    }
+    else if (pertsonaia->x >= 500 && pertsonaia->x <= 600 && pertsonaia->y >= 155 && pertsonaia->y <= 390)
+    {
+        if (!SELFIE_eginda(ANIMALIA_BELUGA) && !SELFIE_eginda(ANIMALIA_BALE_URDIN))
+        {
+            itsasoa(lehioa, superficie, keyboardState, ikusi_pantaila);
+        }
+        kanpo = 1;
+    }
+    else if (pertsonaia->x >= 100 && pertsonaia->x <= 385 && pertsonaia->y >= 400 && pertsonaia->y <= 500)
+    {
+        if (!SELFIE_eginda(ANIMALIA_JAGUAR) || !SELFIE_eginda(ANIMALIA_LEMUR))
+        {
+            basoa(lehioa, superficie, keyboardState, ikusi_pantaila);
+        }
+        kanpo = 1;
+    }
+}
+
+void maparenEszena(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila* ikusi_pantailan)
+{
+    int i, j, flechaDestX = 400, flechaDestY = 500, clicEnFlecha;
+    int hasierkoXpos_perts = 100;
+    int  hasierkoYpos_perts = 150;
+
+    int kanpo = 0;
+
+    SDL_Surface* backgroundSuperficie = initScene(lehioa, &lehiozabalera, &lehioaltuera);
+    SDL_Surface* flechaSuperficie = flechaargazkia(lehioa);
+
+    SDL_Rect pertsonaia = { 100, 150, 50, 50 };  // Ajusta los valores según sea necesario
+
+    SDL_Surface* pertsonaia_argazkia[NUM_DIRECCIONES][NUM_IMAGENES];
+    for (i = 0; i < NUM_DIRECCIONES; ++i)
+    {
+        for (j = 0; j < (i % 2 ? NUM_IMAGENES_HORIZONTAL : NUM_IMAGENES_VERTICAL); ++j)
+        {
+            printf("Cargando imagen: %s\n", imagenes[i][j]);
+            pertsonaia_argazkia[i][j] = IMG_Load(imagenes[i][j]);
+            if (!pertsonaia_argazkia[i][j])
+            {
+                printf("Error al cargar la imagen: %s\n", IMG_GetError());
+                cleanUp(pertsonaia_argazkia, backgroundSuperficie, flechaSuperficie);
+                return;
+            }
+        }
+    }
+
+    while (*ikusi_pantailan == 1) {
+
+        const Uint8* keyboardState = SDL_GetKeyboardState(NULL);
+
+        if (!backgroundSuperficie)
+        {
+            return;
+        }
+
+        if (!kanpo)
+        {
+            pertsonaiaMugitu(lehioa, superficie, &pertsonaia, &bertako_pertsonaia, &bertako_pertsonaia_i, &kanpo, lehiozabalera, lehioaltuera, keyboardState, &hasierkoXpos_perts, &hasierkoYpos_perts);
+            flechaclick_pantaila1(lehioa, superficie, flechaDestX, flechaDestY, ikusi_pantailan);
+            MunduAldaketa(lehioa, superficie, &pertsonaia, kanpo, keyboardState, ikusi_pantailan);
+            SDL_BlitSurface(backgroundSuperficie, NULL, superficie, NULL);
+            SDL_BlitSurface(pertsonaia_argazkia[bertako_pertsonaia][bertako_pertsonaia_i], NULL, superficie, &pertsonaia);
+            SDL_BlitScaled(flechaSuperficie, NULL, superficie, &(SDL_Rect){flechaDestX, flechaDestY, 300, 200});
+
+            if (kanpo)
+            {
+                cleanUp(pertsonaia_argazkia, backgroundSuperficie, flechaSuperficie);
+                break;
+            }
+            SDL_UpdateWindowSurface(lehioa);
+            SDL_Delay(130);
+        }
+    }
+}
+
+SDL_Surface* flechaargazkia(SDL_Window* lehioa)
+{
+    SDL_Surface* flecha = IMG_Load("img/flecha.png");
+    if (flecha == NULL) {
+        printf("Ezin da flecha argazkia kargatu: %s\n", IMG_GetError());
+        return NULL;
+    }
+    return flecha;
+}
+
+enum Pantaila flechaclick_pantaila1(SDL_Window* lehioa, SDL_Surface* superficie, int flechaDestX, int flechaDestY, enum Pantaila* ikusi_pantailan)
+{
+    int clicEnFlecha = 0;
+    int xposizioa;
+    int yposizioa;
+    SDL_Event event;
+
+    while (SDL_PollEvent(&event))
+    {
+
+        if (event.type == SDL_MOUSEBUTTONDOWN)
+        {
+            SDL_GetMouseState(&xposizioa, &yposizioa);
+            if (yposizioa > 300 && yposizioa < 600 && xposizioa >400 && xposizioa < 600)
+            {
+                clicEnFlecha = 1;
+            }
+        }
+        if (clicEnFlecha == 1)
+        {
+            PantailaAldaketa(lehioa, superficie);
+            SDL_UpdateWindowSurface(lehioa);
+        }
+    }
+}
+
+enum Pantaila flechaclick_mapa(SDL_Window* lehioa, SDL_Surface* superficie, int flechaDestX, int flechaDestY, enum Pantaila* ikusi_pantaila) {
+    int clicEnFlecha = 0;
+    int xposizioa;
+    int yposizioa;
+    SDL_Event event;
+
+    while (SDL_PollEvent(&event)) {
+
+        if (event.type == SDL_MOUSEBUTTONDOWN)
+        {
+            SDL_GetMouseState(&xposizioa, &yposizioa);
+
+            if (yposizioa > 300 && yposizioa < 600 && xposizioa >400 && xposizioa < 600)
+            {
+                clicEnFlecha = 1;
+            }
+        }
+        if (clicEnFlecha == 1)
+        {
+            maparenEszena(lehioa, superficie, ikusi_pantaila);
+            SDL_UpdateWindowSurface(lehioa);
+        }
+    }
+}

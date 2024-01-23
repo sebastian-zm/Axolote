@@ -1,0 +1,37 @@
+{
+	< Kaixo! Zer moduz zaude? Zer behar duzu?
+	{
+		> Kaixo, ni Kaxildo kazetaria naiz eta desagertzeko arriskuan dauden animaliei buruzko erreportai bat garatzen nabil. Galdera batzuk erantzuteko prest zaude?
+		< Enoski. Lemur bat naiz eta Madagaskar uhartean bizi naiz.
+		{
+			> Zergatik ari da zure espeziea desagertzen?
+			< Gizakiek etxeko animalia gisa nahi gaituzte bakardadeari aurre egiteko eta gurekin jolasteko. Hori dela eta, ehizatu egiten gaituzte.
+			{
+				> Zer gertatuko da zure espeziea desagertzen bada?
+				< Gu desagertuz gero, landare-espezie asko desagertu daitezke. Landaren haziak guk sakabanatzen ditugu uhartean zehar.
+				{
+					> Mila esker zure arretagatik! Agur!
+				}
+			}
+		}
+	}
+	{
+		> Ondo nago. Erreportai bat egiten ari naiz. Nor zara?
+		< Lemur bat naiz eta Madagaskar uhartean bizi naiz.
+		{
+			> Lemur espezie guztiak ahal daude arriskuan?
+			< 103 lemur espezie arriskuan daude. Desagertzeko arrisku kritikoan berriz, 33 espezie.
+			{
+				> Zein punturarte zaudete arriskuan?
+				< Gure espeziea %95ean murriztu da eta 2.000 lemur inguru soilik geratzen dira euren habitat naturalean bizitzen.
+				{
+					> Zergatik ematen ari da desagerpen nabarmena?
+					< Gizakiek etxeko animalia gisa nahi gaituzte bakardadeari aurre egiteko eta gurekin jolasteko. Beraz, ehizatu egiten gaituzte.
+					{
+						> Mila esker nire galderak erantzunengatik!
+					}
+				}
+			}
+		}
+	}
+}

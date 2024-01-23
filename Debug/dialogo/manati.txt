@@ -1,0 +1,25 @@
+{
+	< Kaixo! Zer behar duzu?
+	{
+		> Kaixo! Erreportai bat egiten ari naiz. Mesedez, nor zaren azaldu.
+		< Ados! Manati amazoniar bat naiz eta bost manatien taldean bizi nintzen, baina nire taldekideak ehizatuak izan dira.
+		{
+			> Oso tristea da! Ehizariak oso arriskutsuak dira zuentzat?
+			< Bai. Espezie babestua gara habitatzen ditugun herrialde guztietan. Hala ere, ehizatuak gara, izan ere gure gorputzekin hainbat produktu sortzen dira.
+			{
+				> Zer egin ahal dezakegu gizakiok zure espezieak bizitzen duen arriskua murrizteko?
+				< Produktu bat erosi baino lehen nondik datorren galdetzea. Askotan ez dakizue produktuen atzetik dagoena eta animali espezie ugariren desagerpena sustatzen duzue erosketen bidez.
+				{
+					> Ados! Amaitzeko, zerbait gehiago esan nahi duzu?
+					< Bai. Meatzaritza ilegalaren ondorioz, hainbat produktu kaltegarri jaurtitzen dira uretara. Hori ekiditzeko, mesedez eskatzen dizuegu meatzaritza ilegala gelditzeko. Gure bizi-baldintzak hobetzerako orduan asko lagunduko luke.
+					{
+						> Mila esker zure arretagatik! Agur!
+					}
+				}
+				{
+					> Mila esker zure arretagatik! Agur!
+				}
+			}
+		}
+	}
+}

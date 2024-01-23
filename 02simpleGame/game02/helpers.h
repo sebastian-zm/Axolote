@@ -2,9 +2,13 @@
 #define HELPERS_H
 
 #include <SDL.h>
+#include <SDL_image.h>
 #include <SDL_ttf.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "selfie.h"
+
 
 #define WINDOW_HEIGHT 600
 #define WINDOW_WIDTH 600
@@ -38,13 +42,14 @@ enum Animalia
 
 
 SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path);
-SDL_Surface* irudiaKargatuGainazalera(SDL_Renderer* renderer, char* path);
+SDL_Surface* irudiaKargatuGainazalera(char* path);
 SDL_Texture* texturaGainazaletik(SDL_Renderer* renderer, SDL_Surface* surface);
 TTF_Font* letraTipoKargatu(int tamaina, char* path);
+FILE* fitxategiaIrakurtzekoIreki(char* path);
 void pantailaGarbitu(SDL_Renderer* renderer);
 void fadeIn(SDL_Renderer* renderer, SDL_Texture* texture, int tiempo);
 char* pathAbsolutua(char* path);
 void handleQuit();
 void pantailaEguneratuEstalkiekin(SDL_Renderer* renderer);
 
-#endif // !HELPERS_H
+#endif

@@ -1,12 +1,4 @@
 #include "dialogo.h"
-#include "dialogoak.h"
-#include "dialogo_grafiko.h"
-#include "helpers.h"
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <SDL.h>
 
 struct Dialogo* DIALOGO_sortu(char izena[], char dialogoa[], struct Dialogo* aukerak[], int aukerakKop)
 {
@@ -23,7 +15,7 @@ struct Dialogo* DIALOGO_sortu(char izena[], char dialogoa[], struct Dialogo* auk
 	dialogo->aukerakKop = aukerakKop;
 
 	memcpy(dialogo->aukerak, aukerak, aukerakKop * sizeof(dialogo));
-	memcpy(dialogo->izena, izena, izenaLen + 1); // memcpy luzeera kalkulatuta dagoelako.
+	memcpy(dialogo->izena, izena, izenaLen + 1);
 	memcpy(dialogo->dialogoa, dialogoa, dialogoaLen + 1);
 
 	return dialogo;

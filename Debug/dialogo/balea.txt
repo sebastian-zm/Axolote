@@ -1,0 +1,36 @@
+{
+	<
+		Kaixo! Zer moduz zaude? Zer behar duzu?
+	{
+		>
+			Ondo nago! Erreportai bat egiten ari naiz. Nor zara?
+		<
+			Ni bale urdina naiz. Iraganean, nire espezieko bale asko ginen eta itsaso guztietan aurkitu gintzakezuen. Halere, gaur egun gutxi geratzen gara ehizaren ondorioz.
+		{
+			>
+				Ehiza arazo larria da zuentzat?
+			<
+				Ez. Gaur egun, herrialde gehienek ehiza debekatu dute eta bale urdinen kopurua igotzen ari da. Gure arazo larriena itsasontziekin ditugun talkak dira.
+			{
+				>
+					Mila esker zure arretagatik! Agur!
+			}
+		}
+	}
+	{
+		>
+			Ondo nagoela esango nuke. Kaxildo naiz eta kazetaria naiz.
+		<
+			Ni bale urdina naiz. Iraganean, nire espezieko bale asko ginen eta itsaso guztietan aurkitu gintzakezuen. Halere, gaur egun gutxi geratzen gara ehizaren ondorioz.
+		{
+			>
+				Ehiza arazo larria da zuentzat?
+			<
+				Ez. Gaur egun, herrialde gehienek ehiza debekatu dute eta bale urdinen kopurua igotzen ari da. Gure arazo larriena itsasontziekin ditugun talkak dira.
+			{
+				>
+					Mila esker zure arretagatik! Agur!
+			}
+		}
+	}
+}

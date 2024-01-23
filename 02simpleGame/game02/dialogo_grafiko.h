@@ -1,9 +1,15 @@
 #ifndef DIALOGO_GRAFIKO_H
 #define DIALOGO_GRAFIKO_H
 
+#include "dialogo.h"
+#include "helpers.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <SDL.h>
 #include <SDL_ttf.h>
-#include "dialogo.h"
+#include <SDL_image.h>
 
 #define DIALOGO_GRAFIKO_AXOLOTE_IRUDIA_AHO_ITXIA "img/axolote1.png"
 #define DIALOGO_GRAFIKO_AXOLOTE_IRUDIA_AHO_IREKIA "img/axolote2.png"
@@ -38,5 +44,4 @@ void DIALOGO_GRAFIKO_aukerakErakutsi(struct Dialogo* dialogo, SDL_Texture* ahoIt
 int DIALOGO_GRAFIKO_itxaronZenbaki(int aukerak);
 
 
-#endif // !DIALOGO_GRAFIKO_H
-
+#endif

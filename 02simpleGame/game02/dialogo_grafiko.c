@@ -1,13 +1,4 @@
 #include "dialogo_grafiko.h"
-#include "dialogo.h"
-#include "helpers.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
 
 int DIALOGO_erakutsi(struct Dialogo* dialogo, enum Animalia animalia, SDL_Renderer* renderer)
 {
