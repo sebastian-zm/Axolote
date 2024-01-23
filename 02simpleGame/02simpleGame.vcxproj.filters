@@ -15,41 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\dialogo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\dialogo_grafiko.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\dialogoak_kargatu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\selfie.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\helpers.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\funtzioak.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\init_screen.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\mugimendua.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\scene_handler.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game02\scene2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="game02\dialogo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -59,13 +24,10 @@
     <ClInclude Include="game02\dialogoak_kargatu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game02\selfie.h">
+    <ClInclude Include="game02\funtzioak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\helpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="game02\funtzioak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\init_screen.h">
@@ -80,5 +42,43 @@
     <ClInclude Include="game02\scene2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="game02\selfie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\dialogo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\dialogo_grafiko.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\dialogoak_kargatu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\funtzioak.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\helpers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\init_screen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\mugimendua.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\scene_handler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\scene2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game02\selfie.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

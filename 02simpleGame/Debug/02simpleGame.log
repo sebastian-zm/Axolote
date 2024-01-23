@@ -1,2 +1,35 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (Dialogo.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  02simpleGame.vcxproj -> C:\Users\julio\source\repos\sebastian-zm\Axolote\Debug\Axolote.exe
+﻿  dialogo.c
+  dialogoak_kargatu.c
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogo.c(68,2): warning C4013: 'SELFIE_main' sin definir; se supone que extern devuelve como resultado int
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogoak_kargatu.c(53,6): warning C4047: 'inicializando': 'int' es distinto en los niveles de direccionamiento indirecto de 'char *'
+  dialogo_grafiko.c
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogoak_kargatu.c(64,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogoak_kargatu.c(72,7): warning C4101: 'izena': variable local sin referencia
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogoak_kargatu.c(73,7): warning C4101: 'dialogoa': variable local sin referencia
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogoak_kargatu.c(130,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\dialogoak_kargatu.c(135,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  funtzioak.c
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\funtzioak.c(22,10): warning C4013: 'SELFIE_eginda' sin definir; se supone que extern devuelve como resultado int
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\funtzioak.c(40,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\funtzioak.c(73,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\funtzioak.c(104,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\funtzioak.c(135,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\funtzioak.c(148,72): warning C4090: 'función': distintos calificadores 'const'
+  helpers.c
+  init_screen.c
+  mugimendua.c
+  scene2.c
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(12,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(18,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(24,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(30,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(89,84): warning C4090: 'función': distintos calificadores 'const'
+  scene_handler.c
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene_handler.c(54,17): warning C4098: 'PantailaBerria': función 'void' que devuelve un valor
+  selfie.c
+  main.c
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\main.c(5,12): warning C4026: función declarada con lista de parámetros formales
+  Generando código...
+C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\02simpleGame\game02\scene2.c(45): warning C4715: 'initScene': no todas las rutas de acceso de control devuelven un valor
+     Creando biblioteca C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\Debug\02simpleGame.lib y objeto C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\Debug\02simpleGame.exp
+  02simpleGame.vcxproj -> C:\Users\julio\Documents\temp\sdl2-0-7ExamplesVcWS\Debug\02simpleGame.exe
