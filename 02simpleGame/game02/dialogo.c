@@ -1,12 +1,4 @@
 #include "dialogo.h"
-#include "dialogoak_kargatu.h"
-#include "dialogo_grafiko.h"
-#include "helpers.h"
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <SDL.h>
 
 struct Dialogo* DIALOGO_sortu(char izena[], char dialogoa[], struct Dialogo* aukerak[], int aukerakKop)
 {

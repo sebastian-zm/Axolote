@@ -1,8 +1,4 @@
 #include "dialogoak_kargatu.h"
-#include "dialogo.h"
-#include "helpers.h"
-#include <stdio.h>
-#include <string.h>
 
 int DIALOGOAK_karaktereaHartu(char* karakterea, FILE* fitxategia)
 {

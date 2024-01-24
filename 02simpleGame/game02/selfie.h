@@ -2,8 +2,10 @@
 #define SELFIE_H
 
 #include <SDL.h>
+#include <SDL_image.h>
+#include <stdio.h>
 
-#define SELFIE_TIEMPO_MUESTRA 2000 // Indica el tiempo de muestra en milisegundos.
+#define SELFIE_TIEMPO_MUESTRA 2000
 
 #define SELFIE_AXOLOTE_IRUDIA "img/axoloteselfie.png"
 #define SELFIE_AMAZONIAR_MANATI_IRUDIA "img/manatiselfie.png"
@@ -19,6 +21,6 @@ void SELFIE_goikoSelfieakMarraztu(SDL_Renderer* renderer);
 int SELFIE_eginda(enum Animalia animalia);
 void SELFIE_main(SDL_Renderer* renderer, enum Animalia animalia);
 
-#endif // !SELFIE_H
+#endif
 
 

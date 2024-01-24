@@ -1,14 +1,14 @@
 {
 	< Kaixo! Zer moduz zaude? Zer behar duzu?
 	{
-		> Kaixo, ni Kaxildo erreportaia naiz eta desagertzeko zorian dauden animaliei buruzko erreportai bat garatzen ari  naiz, horretarako hainbat galdera egin ditazket?
-		< Noski, lemur bat naiz eta Madagascar uhartean bizi naiz.
+		> Kaixo, ni Kaxildo kazetaria naiz eta desagertzeko arriskuan dauden animaliei buruzko erreportai bat garatzen nabil. Galdera batzuk erantzuteko prest zaude?
+		< Enoski. Lemur bat naiz eta Madagaskar uhartean bizi naiz.
 		{
-			> Zein da desagertzearen kausa nagusia?
-			< Etxeko animalia gisa nahi gaituzte bakardadeari aurre egin edo nirekin jolas dezaten. Beraz, ehizatu egiten gaituzte.
+			> Zergatik ari da zure espeziea desagertzen?
+			< Gizakiek etxeko animalia gisa nahi gaituzte bakardadeari aurre egiteko eta gurekin jolasteko. Hori dela eta, ehizatu egiten gaituzte.
 			{
-				> Zer gertatuko litzake espezie hau desagertuz gero?
-				< Gu desagertuz gero, landare-espezie asko desager daitezke, guk sakabamatzen baititugu uhartean zehar landare haziak.
+				> Zer gertatuko da zure espeziea desagertzen bada?
+				< Gu desagertuz gero, landare-espezie asko desagertu daitezke. Landaren haziak guk sakabanatzen ditugu uhartean zehar.
 				{
 					> Mila esker zure arretagatik! Agur!
 				}
@@ -16,19 +16,19 @@
 		}
 	}
 	{
-		> Ondo. Erreportaia bat egiten ari naiz. Nor zara?
-		< Ni, lemur bat naiz eta Madagascar uhartean bizi naiz.
+		> Ondo nago. Erreportai bat egiten ari naiz. Nor zara?
+		< Lemur bat naiz eta Madagaskar uhartean bizi naiz.
 		{
-			> Espezie guztiak daude arriskuan?
-			< 103 lemur espezie mehatxatuta daude, eta desagertzeko arrisku kritikoan 33 espezie daude.
+			> Lemur espezie guztiak ahal daude arriskuan?
+			< 103 lemur espezie arriskuan daude. Desagertzeko arrisku kritikoan berriz, 33 espezie.
 			{
-				> Zein punturaino zaudete arriskuan?
-				< Espezie hau %95 murriztu da eta 2.000 banako inguru baino ez dira geratzen beren habitat naturalean bizitzen.
+				> Zein punturarte zaudete arriskuan?
+				< Gure espeziea %95ean murriztu da eta 2.000 lemur inguru soilik geratzen dira euren habitat naturalean bizitzen.
 				{
-					> Zuen ondorio nagusia zein da?
-					< Etxeko animalia gisa nahi gaituzte bakardadeari aurre egin edo nirekin jolas dezaten. Beraz, ehizatu egiten gaituzte.
+					> Zergatik ematen ari da desagerpen nabarmena?
+					< Gizakiek etxeko animalia gisa nahi gaituzte bakardadeari aurre egiteko eta gurekin jolasteko. Beraz, ehizatu egiten gaituzte.
 					{
-						> Mila esker erantzunengatik!
+						> Mila esker nire galderak erantzunengatik!
 					}
 				}
 			}

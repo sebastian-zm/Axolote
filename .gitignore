@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 FileContentIndex/
 .vs/
@@ -8,3 +9,6 @@ FileContentIndex/
 *.VC.db
 *.VC.db-shm
 *.VC.db-wal
+=======
+.vs/sdlExamplesVcWS/v17/Browse.VC.opendb 
+>>>>>>> leire

@@ -3,33 +3,33 @@
 	< Kaixo! Axolote bat naiz eta laku azpi-azpian bizi naiz, baina ez denbora luzerako.
 	{
 		> Aiba! Zergatik?
-		< Desagertzen ari gara hainbat arrazoirengatik: habitat-galera, arrantza, espezie inbaditzaileak gure habitatean sartzea, gehiegizko ustiapena eta kutsadura.
+		< Desagertzen ari gara hainbat arrazoirengatik: habitat galera, arrantza, espezie inbaditzaileak gure habitatean sartzen direlako, gehiegizko ustiapena eta kutsadura.
 		{
-			> Ze ondorio izango zituen horrek?
+			> Zer ondorio ekar dezake zure espeziearen desagerpenak?
 			< Gu desagertzen bagara, beste espezie batzuk arriskuan jar daitezke. Hain zuzen ere, badaude gu jaten gaituzten bizidunak eta gu desagertzen bagara, gure harrapatzaileak jatekorik gabe geldi daitezke.
 			{
-				> Zer egin dezakegu hori gelditzeko?
-				< Gure espeziea oraindik salba daiteke antzinako nekazaritza-jardunen berpizkundea sustatuz gero eta ondoren, nekazarien kanalen segmentuak guretzako santutegi bihurtuz gero.
+				> Zer egin dezakegu zure espeziea bizirik mantentzeko?
+				< Gure espeziea oraindik salba daiteke antzinako nekazaritza-jardunen berpizkundea sustatzen bada. Nekazarien kanalen segmentuak guretzako santutegi bihurtuz bizirik mantendu ahalko gara.
 				{
-					> Mila esker zure dialoagatik! Agur!
+					> Mila esker zure laguntzagatik! Agur!
 				}
 			}
 		}
 	}
 	{
-		> Ez dizut sinisten. Egia da benetan?
-		< Noski! Nire espeziea arriskuan dago!
+		> Ez dizut sinisten! Egia ahal da benetan?
+		< Hala da! Nire espeziea arriskuan dago!
 		{
 			> Aiba! Zergatik?
 			< Desagertzen ari gara hainbat arrazoirengatik: habitat-galera, arrantza, espezie inbaditzaileak gure habitatean sartzea, gehiegizko ustiapena eta kutsadura.
 			{
-				> Ze ondorio izango zituen horrek?
+				> Zer ondorio ekar dezake zure espeziearen desagerpenak?
 				< Gu desagertzen bagara, beste espezie batzuk arriskuan jar daitezke. Hain zuzen ere, badaude gu jaten gaituzten bizidunak eta gu desagertzen bagara, gure harrapatzaileak jatekorik gabe geldi daitezke.
 				{
 					> Zer egin dezakegu hori gelditzeko?
-					< Gure espeziea oraindik salba daiteke antzinako nekazaritza-jardunen berpizkundea sustatuz gero eta ondoren, nekazarien kanalen segmentuak guretzako santutegi bihurtuz gero.
+					< Gure espeziea oraindik salba daiteke antzinako nekazaritza-jardunen berpizkundea sustatzen bada. Nekazarien kanalen segmentuak guretzako santutegi bihurtuz bizirik mantendu ahalko gara.
 					{
-						> Mila esker zure dialoagatik! Agur!
+						> Mila esker zure laguntzagatik! Agur!
 					}
 				}
 			}

@@ -56,7 +56,7 @@ void SELFIE_goikoSelfieakMarraztu(SDL_Renderer* renderer)
 
     for (i = 0; i < SELFIE_goikoTexturakKopurua; ++i)
     {
-        rect = (SDL_Rect) {i * zabalera, 0, zabalera, altuera};
+        rect = (SDL_Rect){ i * zabalera, 0, zabalera, altuera };
 
         SDL_RenderCopy(renderer, SELFIE_goikoTexturak[i], NULL, &rect);
     }

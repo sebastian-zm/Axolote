@@ -18,12 +18,36 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game02\dialogo.h" />
+    <ClInclude Include="game02\dialogoak_kargatu.h" />
+    <ClInclude Include="game02\dialogo_grafiko.h" />
+    <ClInclude Include="game02\biomak_eta_interrogazioak.h" />
+    <ClInclude Include="game02\helpers.h" />
+    <ClInclude Include="game02\init_screen.h" />
+    <ClInclude Include="game02\mugimendua.h" />
+    <ClInclude Include="game02\scene2.h" />
+    <ClInclude Include="game02\scene_handler.h" />
+    <ClInclude Include="game02\selfie.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="game02\dialogo.c" />
+    <ClCompile Include="game02\dialogoak_kargatu.c" />
+    <ClCompile Include="game02\dialogo_grafiko.c" />
+    <ClCompile Include="game02\biomak_eta_interrogazioak.c" />
+    <ClCompile Include="game02\helpers.c" />
+    <ClCompile Include="game02\init_screen.c" />
+    <ClCompile Include="game02\main.c" />
+    <ClCompile Include="game02\mugimendua.c" />
+    <ClCompile Include="game02\scene2.c" />
+    <ClCompile Include="game02\scene_handler.c" />
+    <ClCompile Include="game02\selfie.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BC384972-8782-4F3D-A52A-13ECCDE414A0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My02simpleGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Axolote</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -145,31 +169,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="game02\funtzioak.c" />
-    <ClCompile Include="game02\helpers.c" />
-    <ClCompile Include="game02\init_screen.c" />
-    <ClCompile Include="game02\mugimendua.c" />
-    <ClCompile Include="game02\scene2.c" />
-    <ClCompile Include="game02\scene_handler.c" />
-    <ClCompile Include="game02\selfie.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="game02\dialogo.c" />
-    <ClCompile Include="game02\dialogoak_kargatu.c" />
-    <ClCompile Include="game02\dialogo_grafiko.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="game02\dialogo.h" />
-    <ClInclude Include="game02\dialogoak_kargatu.h" />
-    <ClInclude Include="game02\dialogo_grafiko.h" />
-    <ClInclude Include="game02\funtzioak.h" />
-    <ClInclude Include="game02\helpers.h" />
-    <ClInclude Include="game02\init_screen.h" />
-    <ClInclude Include="game02\mugimendua.h" />
-    <ClInclude Include="game02\scene2.h" />
-    <ClInclude Include="game02\scene_handler.h" />
-    <ClInclude Include="game02\selfie.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

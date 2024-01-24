@@ -1,4 +1,3 @@
-//mugimendua.h
 #ifndef MUGIMENDUA_H
 #define MUGIMENDUA_H
 
@@ -8,6 +7,10 @@
 #define NUM_IMAGENES_VERTICAL 3
 
 #include <SDL.h>
+#include <SDL_image.h>
+#include <stdio.h>
+
+
 
 extern int kanpo;
 extern SDL_Rect pertsonaia;

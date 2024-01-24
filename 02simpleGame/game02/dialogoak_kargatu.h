@@ -1,7 +1,10 @@
 #ifndef DIALOGOAK_KARGATU_H
 #define DIALOGOAK_KARGATU_H
 
+#include "dialogo.h"
+#include "helpers.h"
 #include <stdio.h>
+#include <string.h>
 
 #define DIALOGOAK_AXOLOTE_PATH "dialogo/axolote.txt"
 #define DIALOGOAK_AMAZONIAR_MANATI_PATH "dialogo/manati.txt"
@@ -30,5 +33,5 @@ void DIALOGO_inizializatuLemur(struct Dialogo** dialogo);
 void DIALOGO_inizializatuAzeriArtiko(struct Dialogo** dialogo);
 void DIALOGO_inizializatuJaguar(struct Dialogo** dialogo);
 
-#endif // !DIALOGOAK_KARGATU_H
+#endif
 

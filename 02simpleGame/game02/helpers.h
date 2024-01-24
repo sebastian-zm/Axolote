@@ -2,9 +2,13 @@
 #define HELPERS_H
 
 #include <SDL.h>
+#include <SDL_image.h>
 #include <SDL_ttf.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "selfie.h"
+
 
 #define WINDOW_HEIGHT 600
 #define WINDOW_WIDTH 600
@@ -48,4 +52,4 @@ char* pathAbsolutua(char* path);
 void handleQuit();
 void pantailaEguneratuEstalkiekin(SDL_Renderer* renderer);
 
-#endif // !HELPERS_H
+#endif

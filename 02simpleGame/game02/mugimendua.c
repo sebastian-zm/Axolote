@@ -1,6 +1,3 @@
-#include <SDL.h>
-#include <SDL_image.h>
-#include <stdio.h>
 #include "mugimendua.h"
 
 int kanpo = 0;
@@ -17,9 +14,8 @@ const char* imagenes[NUM_DIRECCIONES][NUM_IMAGENES] = {
 
 void pertsonaiaMugitu(SDL_Window* lehioa, SDL_Surface* superficie, SDL_Rect* pertsonaia, int* bertako_pertsonaia, int* bertako_pertsonaia_i, int* kanpo, int lehiozabalera, int lehioaltuera, const Uint8* keyboardState)
 {
-    SDL_PumpEvents();  // Actualiza el estado del teclado
+    SDL_PumpEvents();
 
-    // Reinicia la dirección cada vez que se suelta una tecla
     if (!keyboardState[SDL_SCANCODE_W] && !keyboardState[SDL_SCANCODE_A] &&
         !keyboardState[SDL_SCANCODE_S] && !keyboardState[SDL_SCANCODE_D]) {
         // *bertako_pertsonaia = 0;

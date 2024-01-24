@@ -1,11 +1,4 @@
 #include "helpers.h"
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "selfie.h"
 
 // Carga una textura desde un archivo de imagen usando SDL_image.
 SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path)
@@ -49,7 +42,7 @@ SDL_Texture* texturaGainazaletik(SDL_Renderer* renderer, SDL_Surface* surface)
 TTF_Font* letraTipoKargatu(int tamaina, char* path)
 {
     TTF_Font* font;
-    
+
     char* fullPath = pathAbsolutua(path);
 
     font = TTF_OpenFont(fullPath, tamaina);
@@ -70,7 +63,7 @@ FILE* fitxategiaIrakurtzekoIreki(char* path)
     ERRORIF(!fitxategia, "Ezin izan da fitxategia irakurri. Path: %s", fullPath);
 
     free(fullPath);
-    
+
     return fitxategia;
 }
 
@@ -137,7 +130,6 @@ void handleQuit()
         }
     }
 }
-
 
 void estalkiakMargotu(SDL_Renderer* renderer)
 {

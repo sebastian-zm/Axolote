@@ -2,15 +2,15 @@
 	< Kaixo, zer nahi duzu?
 	{
 		> Kaixo, erreportai bat egiten ari naiz eta informazioa behar dut, galdera batzuk erantzun ahal dizkidazu?
-		< Jaguarra naiz eta ekosistema desberdinetan bizitzeko gai naiz. Hala ere oihan baxu tropikalak eta mila metrotik beherako baso subtropikalak nahiago ditut.
+		< Ados! Jaguarra naiz eta ekosistema ezberdinetan bizitzeko gai naiz. Hala ere, orain baxu tropikalak eta mila metrotik beherako baso subtropikalak nahiago ditut.
 		{
-			> Zein da zuen mehatsu nagusiena?
-			< Lurralde eremua da, hau da, lur handiak behar ditugu baina nekazaritza / abelzaintza jarduerekin eta bizitzeko eraikuntzekin zailtasunak edukitzen ditugu gure ekosistema apurtzen duelako.
+			> Zein da zure espeziearen mehatxu nagusiena?
+			< Lurralde eremua da. Hau da, lur handiak behar ditugu ondo bizitzeko, baina nekazaritza eta abelzaintza jarduerekin zein bizitzeko eraikuntzekin zailtasunak ditugu.
 			{
 				> Zer egin dezakegu arazo hau konpontzeko?
-				< Gure ekosistema babestu beharko litzake arreta handiagoz eta ehiza legalarekin bukatzea.
+				< Gizakiek gure ekosistema babestu beharko dute arreta handiagoarekin eta gure ehiza debekatu.
 				{
-					> Eskerrikasko!
+					> Eskerrik asko!
 				}
 			}
 		}
