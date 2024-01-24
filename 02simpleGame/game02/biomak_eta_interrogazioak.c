@@ -8,39 +8,84 @@ const char* biomak[NUM_BIOMAK] = {
     "img/basoa.jpg"
 };
 
+SDL_Rect getAnimaliarenRect(enum Animalia animalia)
+{
+    SDL_Rect rect;
+    switch (animalia)
+    {
+    case ANIMALIA_AXOLOTE:
+        rect = (SDL_Rect){ 385, 485, 50, 50 };
+        break;
+    case ANIMALIA_AMAZONIAR_MANATI:
+        rect = (SDL_Rect){ 350, 375, 50, 50 };
+        break;
+    case ANIMALIA_AZERI_ARTIKO:
+        rect = (SDL_Rect){ 200, 300, 50, 50 };
+        break;
+    case ANIMALIA_BALE_URDIN:
+        rect = (SDL_Rect){ 400, 250, 50, 50 };
+        break;
+    case ANIMALIA_BELUGA:
+        rect = (SDL_Rect){ 100, 250, 50, 50 };
+        break;
+    case ANIMALIA_HARTZ_TXURI:
+        rect = (SDL_Rect){ 400, 450, 50, 50 };
+        break;
+    case ANIMALIA_JAGUAR:
+        rect = (SDL_Rect){ 400, 500, 50, 50 };
+        break;
+    default: // ANIMALIA_LEMUR
+        rect = (SDL_Rect){ 100, 500, 50, 50 };
+        break;
+    }
+    return rect;
+}
+
+void bioma(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila* ikusi_pantailan, int bioma, enum Animalia animalia1, enum animalia animalia2)
+{
+    int kanpo = 0;
+    SDL_Event e;
+    atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[bioma], superficie, lehioa, ikusi_pantailan);
+    interrogazioaAzaldu(lehioa, animalia1);
+    interrogazioaAzaldu(lehioa, animalia2);
+
+    while (!kanpo)
+    {
+        while (SDL_PollEvent(&e) != 0)
+        {
+            handleQuitEvent(e);
+            flechaClickMapa(e, lehioa, superficie, ikusi_pantailan);
+            if (interrogazioariKlick(lehioa, e, animalia1))
+            {
+                atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[bioma], superficie, lehioa, ikusi_pantailan);
+                interrogazioaAzaldu(lehioa, animalia1);
+                interrogazioaAzaldu(lehioa, animalia2);
+            }
+            if (interrogazioariKlick(lehioa, e, animalia2))
+            {
+                atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[bioma], superficie, lehioa, ikusi_pantailan);
+                interrogazioaAzaldu(lehioa, animalia1);
+                interrogazioaAzaldu(lehioa, animalia2);
+            }
+
+        }
+
+        if (SELFIE_eginda(animalia1) && SELFIE_eginda(animalia2))
+        {
+            kanpo = 1;
+        }
+
+        SDL_Delay(16);
+    }
+}
+
 /* void ibaia:
 - ibaiaren eszena kargatzen du: atzeko planoa, interrogazioen erakusketa eta euren gainean klik egiterakoan detekzioa
 - ibaian agertuko diren animalia bakoitzarentzako "rect" bat sortzen du, euren interrogazioen x, y, altuera eta zabalera finkatzeko
 - behin bi animaliekin selfie-a eginda dagoela, main nagusitik aterako da funtzioa */
 void ibaia(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan)
 {
-    int kanpo = 0;
-    SDL_Event e;
-    atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[0], superficie, lehioa, ikusi_pantailan);
-    SDL_Rect rectAxolote = { 385, 485, 50, 50 }; //axolotearen galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-    SDL_Rect rectManati = { 350, 375, 50, 50 }; //manatiaren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-
-    interrogazioakAzaldu(lehioa, rectAxolote, rectManati);
-
-    while (!kanpo)
-    {
-        while (SDL_PollEvent(&e) != 0)
-        {
-            if (e.type == SDL_QUIT)
-            {
-                kanpo = 1;
-            }
-        }
-
-        interrogazioeiKlick(lehioa, rectAxolote, rectManati, superficie, 400, 500, ikusi_pantailan);
-
-        if (SELFIE_eginda(ANIMALIA_AXOLOTE) && SELFIE_eginda(ANIMALIA_AMAZONIAR_MANATI))
-        {
-            kanpo == 1;
-        }
-
-        SDL_Delay(16);
-    }
+    bioma(lehioa, superficie, ikusi_pantailan, 0, ANIMALIA_AXOLOTE, ANIMALIA_AMAZONIAR_MANATI);
 }
 
 /* void itsasoa:
@@ -49,33 +94,7 @@ void ibaia(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardSta
 - behin bi animaliekin selfie-a eginda dagoela, main nagusitik aterako da funtzioa */
 void itsasoa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan)
 {
-    int kanpo = 0;
-    SDL_Event e;
-    atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[2], superficie, lehioa, ikusi_pantailan);
-    SDL_Rect rectBeluga = { 100, 250, 50, 50 }; //belugaren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-    SDL_Rect rectBaleUrdina = { 400, 250, 50, 50 }; //bale urdinaren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-
-    interrogazioakAzaldu(lehioa, rectBeluga, rectBaleUrdina);
-    
-    while (!kanpo)
-    {
-        while (SDL_PollEvent(&e) != 0)
-        {
-            if (e.type == SDL_QUIT)
-            {
-                kanpo = 1;
-            }
-        }
-
-        interrogazioeiKlick(lehioa, rectBeluga, rectBaleUrdina, superficie, 400, 500, ikusi_pantailan);
-
-        if (SELFIE_eginda(ANIMALIA_BELUGA) && SELFIE_eginda(ANIMALIA_BALE_URDIN))
-        {
-            kanpo == 1;
-        }
-
-        SDL_Delay(16);
-    }
+    bioma(lehioa, superficie, ikusi_pantailan, 2, ANIMALIA_BELUGA, ANIMALIA_BALE_URDIN);
 }
 
 /* void basoa:
@@ -84,33 +103,7 @@ void itsasoa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardS
 - behin bi animaliekin selfie-a eginda dagoela, main nagusitik aterako da funtzioa */
 void basoa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan)
 {
-    int kanpo = 0;
-    SDL_Event e;
-    atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[3], superficie, lehioa, ikusi_pantailan);
-    SDL_Rect rectLemurra = { 100, 500, 50, 50 }; //lemurraren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-    SDL_Rect rectJaguarra = { 400, 500, 50, 50 }; //jaguarraren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-
-    interrogazioakAzaldu(lehioa, rectLemurra, rectJaguarra);
-
-    while (!kanpo)
-    {
-        while (SDL_PollEvent(&e) != 0)
-        {
-            if (e.type == SDL_QUIT)
-            {
-                kanpo = 1;
-            }
-        }
-
-        interrogazioeiKlick(lehioa, rectLemurra, rectJaguarra, superficie, 400, 500, ikusi_pantailan);
-
-        if (SELFIE_eginda(ANIMALIA_LEMUR) && SELFIE_eginda(ANIMALIA_JAGUAR))
-        {
-            kanpo == 1;
-        }
-
-        SDL_Delay(16);
-    }
+    bioma(lehioa, superficie, ikusi_pantailan, 3, ANIMALIA_LEMUR, ANIMALIA_JAGUAR);
 }
 
 /* void iparPoloa:
@@ -119,36 +112,11 @@ void basoa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardSta
 - behin bi animaliekin selfie-a eginda dagoela, main nagusitik aterako da funtzioa */
 void iparPoloa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan)
 {
-    int kanpo = 0;
-    SDL_Event e;
-    atzekoPlanoaAldatuEtaFletxaAzaldu(biomak[1], superficie, lehioa, ikusi_pantailan);
-    SDL_Rect rectHartzTxuria = { 400, 450, 50, 50 }; //hartz txuriaren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-    SDL_Rect rectAzeriArtikoa = { 200, 300, 50, 50 }; //azeri artikoaren galdera ikurrak sortzen duen errektanguluaren x, y, h, w
-    interrogazioakAzaldu(lehioa, rectHartzTxuria, rectAzeriArtikoa);
-
-    while (!kanpo)
-    {
-        while (SDL_PollEvent(&e) != 0)
-        {
-            if (e.type == SDL_QUIT)
-            {
-                kanpo = 1;
-            }
-        }
-
-        interrogazioeiKlick(lehioa, rectHartzTxuria, rectAzeriArtikoa, superficie, 400, 500, ikusi_pantailan);
-
-        if (SELFIE_eginda(ANIMALIA_HARTZ_TXURI) && SELFIE_eginda(ANIMALIA_AZERI_ARTIKO))
-        {
-            kanpo == 1;
-        }
-
-        SDL_Delay(16);
-    }
+    bioma(lehioa, superficie, ikusi_pantailan, 1, ANIMALIA_HARTZ_TXURI, ANIMALIA_AZERI_ARTIKO);
 }
 
 //lehioaren atzeko planoan agertuko den irudia aldatzeko balio duen funtzioa + fletxaren argazkia kargatzeko eta azaltzeko
-void atzekoPlanoaAldatuEtaFletxaAzaldu(const char* imagePath, SDL_Surface* superficie, SDL_Window* lehioa, enum Pantaila* ikusi_pantailan)
+void atzekoPlanoaAldatuEtaFletxaAzaldu(char* imagePath, SDL_Surface* superficie, SDL_Window* lehioa, enum Pantaila* ikusi_pantailan)
 {
     int lehiozabalera, lehioaltuera, flechaDestX = 400, flechaDestY = 500;
     SDL_GetWindowSize(lehioa, &lehiozabalera, &lehioaltuera);
@@ -168,172 +136,51 @@ void atzekoPlanoaAldatuEtaFletxaAzaldu(const char* imagePath, SDL_Surface* super
     SDL_BlitScaled(backgroundSurface, NULL, scaledBackgroundSurface, NULL);
     SDL_FreeSurface(backgroundSurface);
     SDL_BlitSurface(scaledBackgroundSurface, NULL, superficie, NULL);
-    SDL_UpdateWindowSurface(lehioa);
+    pantailaEguneratuEstalkiekinGainazala(lehioa, superficie);
     SDL_FreeSurface(scaledBackgroundSurface);
     SDL_BlitScaled(flechaSuperficie, NULL, superficie, &(rectFlecha));
     SDL_FreeSurface(flechaSuperficie);
-    SDL_Renderer* renderer = SDL_GetRenderer(lehioa);
-    SDL_RenderCopy(renderer, texturaGainazaletik(renderer, superficie), NULL, NULL  );
-    pantailaEguneratuEstalkiekin(renderer);
 }
 
 //jasotako bi "rect" ezberdinen arabera pantailan bi galdera ikur erakusteko balio duen funtzioa
-void interrogazioakAzaldu(SDL_Window* lehioa, SDL_Rect rectInterrogazioa1, SDL_Rect rectInterrogazioa2)
+void interrogazioaAzaldu(SDL_Window* lehioa, enum Animalia animalia)
 {
-    SDL_Surface* superficie = SDL_GetWindowSurface(lehioa);
+    if (!SELFIE_eginda(animalia))
+    {
+        SDL_Surface* superficie = SDL_GetWindowSurface(lehioa);
 
-    SDL_Surface* interrogazioa = irudiaKargatuGainazalera("img/animali.png");
+        SDL_Surface* interrogazioa = irudiaKargatuGainazalera("img/animali.png");
 
-    SDL_BlitSurface(interrogazioa, NULL, superficie, &rectInterrogazioa1);
-    SDL_BlitSurface(interrogazioa, NULL, superficie, &rectInterrogazioa2);
+        SDL_Rect rect = getAnimaliarenRect(animalia);
 
+        SDL_BlitSurface(interrogazioa, NULL, superficie, &rect);
 
-    SDL_UpdateWindowSurface(lehioa);
+        pantailaEguneratuEstalkiekinGainazala(lehioa, superficie);
 
-    SDL_FreeSurface(interrogazioa);
+        SDL_FreeSurface(interrogazioa);
+    }
 }
 
-//galdera ikurrek sortzen dituzten errektanguluen gainean klik egiterakoan beharrezkoa den animalia azaltzen duen funtzioa
-void interrogazioeiKlick(SDL_Window* lehioa, SDL_Rect rectInterrogazioa1, SDL_Rect rectInterrogazioa2, SDL_Surface* superficie, int flechaDestX, int flechaDestY, enum Pantaila* ikusi_pantailan)
+int interrogazioariKlick(SDL_Window* lehioa, SDL_Event ebentua, enum Animalia animalia)
 {
-    SDL_Event event;
-    int atera = 0;
+    SDL_Rect rect;
+    int eginda = 0;
+    int mouseX, mouseY;
 
-    while (!atera)
+    if (ebentua.type == SDL_MOUSEBUTTONDOWN)
     {
-        flechaClickMapa(lehioa, superficie, rectFlecha.x, rectFlecha.y, ikusi_pantailan);
-        while (SDL_PollEvent(&event))
+        rect = getAnimaliarenRect(animalia);
+        SDL_GetMouseState(&mouseX, &mouseY);
+        if (SDL_PointInRect(&(SDL_Point) { mouseX, mouseY }, & rect))
         {
-
-            if (event.type == SDL_QUIT)
+            if (!SELFIE_eginda(animalia))
             {
-                atera = 1;
-            }
-            else if (event.type == SDL_MOUSEBUTTONDOWN)
-            {
-                int mouseX, mouseY;
-                SDL_GetMouseState(&mouseX, &mouseY);
-                if (SDL_PointInRect(&(SDL_Point) { mouseX, mouseY }, & (rectInterrogazioa1)))
-                {
-                    if (!SELFIE_eginda(ANIMALIA_AXOLOTE))
-                    {
-                        if (rectInterrogazioa1.x == 385 && rectInterrogazioa1.y == 485)
-                        {
-                            animaliaHautatuDa(ANIMALIA_AXOLOTE, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                        atera = 1;
-                    }
-                    if (!SELFIE_eginda(ANIMALIA_BELUGA))
-                    {
-                        if (rectInterrogazioa1.x == 100 && rectInterrogazioa1.y == 250)
-                        {
-                            animaliaHautatuDa(ANIMALIA_BELUGA, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                        atera = 1;
-                    }
-                    if (!SELFIE_eginda(ANIMALIA_LEMUR))
-                    {
-                        if (rectInterrogazioa1.x == 100 && rectInterrogazioa1.y == 500)
-                        {
-                            animaliaHautatuDa(ANIMALIA_LEMUR, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                        atera = 1;
-                    }
-                    if (!SELFIE_eginda(ANIMALIA_HARTZ_TXURI))
-                    {
-                        if (rectInterrogazioa1.x == 400 && rectInterrogazioa1.y == 450)
-                        {
-                            animaliaHautatuDa(ANIMALIA_HARTZ_TXURI, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa1);
-                        atera = 1;
-                    }
-                }
-                else if (SDL_PointInRect(&(SDL_Point) { mouseX, mouseY }, & (rectInterrogazioa2)))
-                {
-                    if (!SELFIE_eginda(ANIMALIA_AMAZONIAR_MANATI))
-                    {
-                        if (rectInterrogazioa2.x == 350 && rectInterrogazioa2.y == 375)
-                        {
-                            animaliaHautatuDa(ANIMALIA_AMAZONIAR_MANATI, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                        atera = 1;
-                    }
-                    if (!SELFIE_eginda(ANIMALIA_BALE_URDIN))
-                    {
-                        if (rectInterrogazioa2.x == 400 && rectInterrogazioa2.y == 250)
-                        {
-                            animaliaHautatuDa(ANIMALIA_BALE_URDIN, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                        atera = 1;
-                    }
-                    if (!SELFIE_eginda(ANIMALIA_JAGUAR))
-                    {
-                        if (rectInterrogazioa2.x == 400 && rectInterrogazioa2.y == 500)
-                        {
-                            animaliaHautatuDa(ANIMALIA_JAGUAR, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                        atera = 1;
-                    }
-                    if (!SELFIE_eginda(ANIMALIA_AZERI_ARTIKO))
-                    {
-                        if (rectInterrogazioa2.x == 200 && rectInterrogazioa2.y == 300)
-                        {
-                            animaliaHautatuDa(ANIMALIA_AZERI_ARTIKO, lehioa);
-                            eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                            atera = 1;
-                        }
-                    }
-                    else
-                    {
-                        eliminatuInterrogazioa(lehioa, rectInterrogazioa2);
-                        atera = 1;
-                    }
-                }
+                animaliaHautatuDa(animalia, lehioa);
+                eginda = 1;
             }
         }
     }
+    return eginda;
 }
 
 //jasotako animaliaren arabera beharrezkoa den dialogoa hasieratzeko balio duen funtzioa
@@ -342,18 +189,3 @@ void animaliaHautatuDa(enum Animalia animalia, SDL_Window* lehioa)
     DIALOGO_main(animalia, SDL_GetRenderer(lehioa));
 }
 
-//galdera ikur baten gainetik posizio berean beste irudi bat gainetik ezartzeko balio duen funtzioa
-void eliminatuInterrogazioa(SDL_Window* lehioa, SDL_Rect rectInterrogazioa)
-{
-    SDL_Surface* superficie = SDL_GetWindowSurface(lehioa);
-
-    SDL_Surface* tickSurface = irudiaKargatuGainazalera("img/tick.png");
-
-    SDL_BlitSurface(tickSurface, NULL, superficie, &rectInterrogazioa);
-
-    SDL_UpdateWindowSurface(lehioa);
-
-    SDL_Delay(10);
-
-    SDL_FreeSurface(tickSurface);
-}

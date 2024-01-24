@@ -46,7 +46,7 @@ int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia)
 
 	DIALOGOAK_lehenKaraktereaHartu(buffer, fitxategia);
 
-	int ondo = fgets(buffer + 1, n, fitxategia);
+	int ondo = (int) fgets(buffer + 1, n, fitxategia);
 
 	if (ondo)
 	{
@@ -57,7 +57,7 @@ int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia)
 	if (ondo)
 	{
 		buffer[bufferLen - 1] = 0;
-		strcpy(string, buffer);
+		strcpy(string, buffer); // fgets() makes sure this does not overflow
 	}
 
 	return ondo;
@@ -65,8 +65,6 @@ int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia)
 
 int DIALOGOAK_arrayInizializatuFitxategitik(struct Dialogo* arr[], int maxLength, int* aukera, FILE* fitxategia)
 {
-	char izena[DIALOGO_MAX_STR_LEN + 1];
-	char dialogoa[DIALOGO_MAX_STR_LEN + 1];
 	char oraingoa;
 
 	DIALOGOAK_lehenKaraktereaHartu(&oraingoa, fitxategia);
@@ -103,7 +101,7 @@ int DIALOGOAK_inizializatuFitxategitik(struct Dialogo** dialogo, FILE* fitxategi
 {
 	char izena[DIALOGO_MAX_STR_LEN + 1] = "";
 	char dialogoa[DIALOGO_MAX_STR_LEN + 1] = "";
-	struct Dialogo* arr[DIALOGO_MAX_AUKERAK];
+	struct Dialogo* arr[DIALOGO_MAX_AUKERAK] = { NULL };
 	int arrLen = 0;
 	char oraingoa;
 	char oraingoaStr[2] = { 0, 0 };
@@ -120,15 +118,15 @@ int DIALOGOAK_inizializatuFitxategitik(struct Dialogo** dialogo, FILE* fitxategi
 			ondo = DIALOGOAK_inizializatuFitxategitik(&arr[arrLen], fitxategia);
 			++arrLen;
 		}
-		else if (oraingoa == '>' && !strstr(found, ">"))
+		else if (oraingoa == '>' && !strchr(found, '>'))
 		{
 			ondo = DIALOGOAK_stringIrakurri(izena, sizeof(izena), fitxategia);
-			strcat(found, oraingoaStr);
+			strcat(found, oraingoaStr); // safe because of `!strchr(found, '>')` on the if and the max length of 3
 		}
-		else if (oraingoa == '<' && !strstr(found, "<"))
+		else if (oraingoa == '<' && !strchr(found, '<'))
 		{
 			ondo = DIALOGOAK_stringIrakurri(dialogoa, sizeof(dialogoa), fitxategia);
-			strcat(found, oraingoaStr);
+			strcat(found, oraingoaStr); // safe because of `!strchr(found, '<')` on the if and the max length of 3
 		}
 		else
 		{

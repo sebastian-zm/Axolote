@@ -39,6 +39,7 @@ void pantaila1(SDL_Window* lehioa, SDL_Surface* superficie) {
 
     SDL_FreeSurface(background); // garbitzeko memoria
 }
+
 void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila* ikusi_pantaila)
 {
     SDL_FillRect(superficie, NULL, 0x000000);
@@ -46,21 +47,20 @@ void PantailaBerria(SDL_Window* lehioa, SDL_Surface* superficie, enum Pantaila* 
     if (*ikusi_pantaila == PANTAILA1) {
         pantaila1(lehioa, superficie);
     }
-    else if (*ikusi_pantaila == JOKUPANTAILA) {
-
+    else if (*ikusi_pantaila == JOKUPANTAILA)
+    {
         // Llamada a la función scene2() que está en scene2.c
         maparenEszena(lehioa, superficie, ikusi_pantaila);
-
-
     }
     else if (*ikusi_pantaila == HELPANTAILA)
     {
         helpantaila(lehioa, superficie, ikusi_pantaila);
-
     }
-    else if (*ikusi_pantaila == EXITPANTAILA) {
+    else if (*ikusi_pantaila == EXITPANTAILA)
+    {
         SDL_DestroyWindow(lehioa);
         SDL_Quit();
+        exit(EXIT_SUCCESS);
 
     }
 }
@@ -90,13 +90,10 @@ void PantailaAldaketa(SDL_Window* lehioa, SDL_Surface* superficie)
     enum Pantaila ikusi_pantaila = PANTAILA1;
 
     while (!kanpo) {
-        while (SDL_PollEvent(&eventoa) != 0) {
-            if (eventoa.type == SDL_QUIT) {
-                kanpo = 1;
-            }
-            else {
-                clickeventua(&eventoa, &ikusi_pantaila);
-            }
+        while (SDL_PollEvent(&eventoa) != 0)
+        {
+            handleQuitEvent(eventoa);
+            clickeventua(&eventoa, &ikusi_pantaila);
         }
 
         PantailaBerria(lehioa, superficie, &ikusi_pantaila);

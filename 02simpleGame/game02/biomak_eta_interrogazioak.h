@@ -13,13 +13,13 @@
 
 extern const char* biomak[NUM_BIOMAK];
 
-void atzekoPlanoaAldatuEtaFletxaAzaldu(const char* imagePath, SDL_Surface* superficie, SDL_Window* lehioa, enum Pantaila* ikusi_pantailan);
+void atzekoPlanoaAldatuEtaFletxaAzaldu(char* imagePath, SDL_Surface* superficie, SDL_Window* lehioa, enum Pantaila* ikusi_pantailan);
 void ibaia(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan);
 void iparPoloa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan);
 void itsasoa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan);
 void basoa(SDL_Window* lehioa, SDL_Surface* superficie, const Uint8* keyboardState, enum Pantaila* ikusi_pantailan);
-void interrogazioakAzaldu(SDL_Window* lehioa, SDL_Rect rectInterrogazioa1, SDL_Rect rectInterrogazioa2);
-void interrogazioeiKlick(SDL_Window* lehioa, SDL_Rect rectInterrogazioa1, SDL_Rect rectInterrogazioa2, SDL_Surface* superficie, int flechaDestX, int flechaDestY, enum Pantaila* ikusi_pantailan);
+void interrogazioaAzaldu(SDL_Window* lehioa, enum Animalia animalia);
+int interrogazioariKlick(SDL_Window* lehioa, SDL_Event ebentua, enum Animalia animalia);
 void eliminatuInterrogazioa(SDL_Window* lehioa, SDL_Rect rectInterrogazioa);
 void animaliaHautatuDa(enum Animalia animalia, SDL_Window* lehioa);
 
