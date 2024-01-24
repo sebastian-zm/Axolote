@@ -1,14 +1,1 @@
-<<<<<<< HEAD
-
-FileContentIndex/
-.vs/
-!.vs/ProjectSettings.json
-!.vs/slnx.sqlite
-
-*.opendb
-*.VC.db
-*.VC.db-shm
-*.VC.db-wal
-=======
 .vs/sdlExamplesVcWS/v17/Browse.VC.opendb 
->>>>>>> leire
