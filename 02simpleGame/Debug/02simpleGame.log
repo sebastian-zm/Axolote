@@ -1,8 +1,40 @@
-﻿  biomak_eta_interrogazioak.c
-C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\biomak_eta_interrogazioak.c(39,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
-C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\biomak_eta_interrogazioak.c(74,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
-C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\biomak_eta_interrogazioak.c(109,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
-C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\biomak_eta_interrogazioak.c(143,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
-C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\biomak_eta_interrogazioak.c(156,72): warning C4090: 'función': distintos calificadores 'const'
-C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\02simpleGame\game02\biomak_eta_interrogazioak.c(204,9): warning C4013: 'flechaClickMapa' sin definir; se supone que extern devuelve como resultado int
-  02simpleGame.vcxproj -> C:\Users\leire\Desktop\sdl2-0-7ExamplesVcWS (1)\sdl2-0-7ExamplesVcWS\Debug\02simpleGame.exe
+﻿  dialogo.c
+  dialogoak_kargatu.c
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak_kargatu.c(49,6): warning C4047: 'inicializando': 'int' es distinto en los niveles de direccionamiento indirecto de 'char *'
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak_kargatu.c(60,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak_kargatu.c(68,7): warning C4101: 'izena': variable local sin referencia
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak_kargatu.c(69,7): warning C4101: 'dialogoa': variable local sin referencia
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak_kargatu.c(126,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\dialogoak_kargatu.c(131,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  dialogo_grafiko.c
+  biomak_eta_interrogazioak.c
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\biomak_eta_interrogazioak.c(39,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\biomak_eta_interrogazioak.c(74,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\biomak_eta_interrogazioak.c(109,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\biomak_eta_interrogazioak.c(143,19): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\biomak_eta_interrogazioak.c(156,72): warning C4090: 'función': distintos calificadores 'const'
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\biomak_eta_interrogazioak.c(204,9): warning C4013: 'flechaClickMapa' sin definir; se supone que extern devuelve como resultado int
+  helpers.c
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\helpers.c(61,24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  init_screen.c
+  main.c
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\main.c(5,12): warning C4026: función declarada con lista de parámetros formales
+  mugimendua.c
+  scene2.c
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(11,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(17,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(23,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(29,9): warning C4033: 'initScene' debe devolver un valor
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(93,5): warning C4013: 'estalkiakMargotu' sin definir; se supone que extern devuelve como resultado int
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(107,68): warning C4020: 'cleanUp': hay demasiados parámetros reales
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(124,159): warning C4020: 'pertsonaiaMugitu': hay demasiados parámetros reales
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(133,68): warning C4020: 'cleanUp': hay demasiados parámetros reales
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(85,15): warning C4101: 'clicEnFlecha': variable local sin referencia
+  scene_handler.c
+  selfie.c
+  Generando código...
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(44): warning C4715: 'initScene': no todas las rutas de acceso de control devuelven un valor
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(176): warning C4716: 'flechaClick': debe devolver un valor
+C:\Users\leire\source\repos\sebastian-zm\Axolote\02simpleGame\game02\scene2.c(204): warning C4716: 'flechaClickMapa': debe devolver un valor
+     Creando biblioteca C:\Users\leire\source\repos\sebastian-zm\Axolote\Debug\02simpleGame.lib y objeto C:\Users\leire\source\repos\sebastian-zm\Axolote\Debug\02simpleGame.exp
+  02simpleGame.vcxproj -> C:\Users\leire\source\repos\sebastian-zm\Axolote\Debug\02simpleGame.exe
