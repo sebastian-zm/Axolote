@@ -154,22 +154,15 @@ int DIALOGO_GRAFIKO_itxaronZenbaki(int aukerak)
     SDL_Event e;
     while (SDL_PollEvent(&e) != 0) // Deskartatu aurreko ebentu guztiak, SDL_QUIT ezik.
     {
-        if (e.type == SDL_QUIT)
-        {
-            fprintf(stderr, "Irtetzen SDL_QUIT jaso delako.");
-            exit(EXIT_SUCCESS);
-        }
+        handleQuitEvent(e);
     }
     while (!zenbaki)
     {
         if (SDL_PollEvent(&e) != 0)
         {
-            if (e.type == SDL_QUIT)
-            {
-                fprintf(stderr, "Irtetzen SDL_QUIT jaso delako.");
-                exit(EXIT_SUCCESS);
-            }
-            else if (e.type == SDL_KEYDOWN)
+
+            handleQuitEvent(e);
+            if (e.type == SDL_KEYDOWN)
             {
                 switch (e.key.keysym.sym)
                 {

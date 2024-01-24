@@ -3,7 +3,7 @@
 void Hasieratu(SDL_Window** lehioa, SDL_Surface** superficie) {
     SDL_Init(SDL_INIT_VIDEO);
     // hasieratu bideo sisema
-    *lehioa = SDL_CreateWindow("Hasierako pantaila", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 600, 600, SDL_WINDOW_SHOWN);
+    *lehioa = SDL_CreateWindow("ANIMAL EXTINCTION", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 600, 600, SDL_WINDOW_SHOWN);
     // lehioa sortu, 600*600 eta puntero aldagaia definitu
     if (*lehioa == NULL) {
         printf("Lehioa gaizki sortu da: %s\n", SDL_GetError());

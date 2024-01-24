@@ -7,7 +7,7 @@
 			> Oso tristea da! Ehizariak oso arriskutsuak dira zuentzat?
 			< Bai. Espezie babestua gara habitatzen ditugun herrialde guztietan. Hala ere, ehizatuak gara, izan ere gure gorputzekin hainbat produktu sortzen dira.
 			{
-				> Zer egin ahal dezakegu gizakiok zure espezieak bizitzen duen arriskua murrizteko?
+				> Zer egin dezakegu gizakiok zure espezieak bizitzen duen arriskua murrizteko?
 				< Produktu bat erosi baino lehen nondik datorren galdetzea. Askotan ez dakizue produktuen atzetik dagoena eta animali espezie ugariren desagerpena sustatzen duzue erosketen bidez.
 				{
 					> Ados! Amaitzeko, zerbait gehiago esan nahi duzu?

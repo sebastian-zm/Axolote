@@ -2,7 +2,11 @@
 #include "scene_handler.h"
 #include "mugimendua.h"
 
-int main() {
+#define UNUSED(x) {(void) x;} // Avoid warnings
+
+int main(int argc, char** argv) {
+    UNUSED(argc);
+    UNUSED(argv);
     SDL_Window* lehioa = NULL;
     // el contenedor visual en el que se renderizan los gráficos, pero no poder dibujar ALDAGAI PUNTEROA
     SDL_Surface* superficie = NULL;

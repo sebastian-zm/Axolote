@@ -116,6 +116,16 @@ char* pathAbsolutua(char* path)
     return fullPath;
 }
 
+void handleQuitEvent(SDL_Event e)
+{
+    if (e.type == SDL_QUIT)
+    {
+        fprintf(stderr, "Irtetzen SDL_QUIT jaso delako.");
+        exit(EXIT_SUCCESS);
+        fprintf(stderr, "Fatal Error: exit egin oidoren programa jarraitu da.");
+    }
+}
+
 void handleQuit()
 {
     SDL_Event e;
@@ -123,11 +133,7 @@ void handleQuit()
     // Deskartatu aurreko ebentu guztiak, SDL_QUIT ezik.
     while (SDL_PollEvent(&e) != 0)
     {
-        if (e.type == SDL_QUIT)
-        {
-            fprintf(stderr, "Irtetzen SDL_QUIT jaso delako.");
-            exit(EXIT_SUCCESS);
-        }
+        handleQuitEvent(e);
     }
 }
 
@@ -138,6 +144,15 @@ void estalkiakMargotu(SDL_Renderer* renderer)
 
 void pantailaEguneratuEstalkiekin(SDL_Renderer* renderer)
 {
+    estalkiakMargotu(renderer);
+    SDL_RenderPresent(renderer);
+}
+
+void pantailaEguneratuEstalkiekinGainazala(SDL_Window* window, SDL_Surface* surface)
+{
+    SDL_Renderer* renderer = SDL_GetRenderer(window);
+    SDL_Texture* texture = texturaGainazaletik(renderer, surface);
+    SDL_RenderCopy(renderer, texture, NULL, NULL);
     estalkiakMargotu(renderer);
     SDL_RenderPresent(renderer);
 }

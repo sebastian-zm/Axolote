@@ -49,7 +49,9 @@ FILE* fitxategiaIrakurtzekoIreki(char* path);
 void pantailaGarbitu(SDL_Renderer* renderer);
 void fadeIn(SDL_Renderer* renderer, SDL_Texture* texture, int tiempo);
 char* pathAbsolutua(char* path);
+void handleQuitEvent(SDL_Event e);
 void handleQuit();
 void pantailaEguneratuEstalkiekin(SDL_Renderer* renderer);
+void pantailaEguneratuEstalkiekinGainazala(SDL_Window* window, SDL_Surface* surface);
 
 #endif
