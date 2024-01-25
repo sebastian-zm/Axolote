@@ -1,22 +1,19 @@
 #include "init_screen.h"
-#include "scene_handler.h"
+#include "hasierako_orrialdea.h"
 #include "mugimendua.h"
 
-#define UNUSED(x) {(void) x;} // Avoid warnings
+#define UNUSED(x) {(void) x;} //makroa warning batzuk saihesteko
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv)
+{
     UNUSED(argc);
     UNUSED(argv);
-    SDL_Window* lehioa = NULL;
-    // el contenedor visual en el que se renderizan los gráficos, pero no poder dibujar ALDAGAI PUNTEROA
+    SDL_Window* leihoa = NULL;
     SDL_Surface* superficie = NULL;
-    //La superficie representa el área de la ventana donde se pueden dibujar imágenes, 
-    //texturas y otros elementos gráficos ALDAGAI PUNTEROA
 
-    Hasieratu(&lehioa, &superficie);
-    // & zen aldagai hauen memoria informazioa bidali nahi da 
+    Hasieratu(&leihoa, &superficie);
+    // & --> memoria aldatzeko (puntero bat bidaltzeko)
+    PantailaAldaketa(leihoa, superficie);
 
-    PantailaAldaketa(lehioa, superficie);
-    // & ze zen aldagaiaren edukia bakarrik aldatu eta ez memoria
     return 0;
 }

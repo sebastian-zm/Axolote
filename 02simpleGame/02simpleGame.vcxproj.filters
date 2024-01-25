@@ -36,13 +36,16 @@
     <ClInclude Include="game02\mugimendua.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game02\scene_handler.h">
+    <ClInclude Include="game02\hasierako_orrialdea.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game02\scene2.h">
+    <ClInclude Include="game02\mapa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\selfie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="amaiera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,13 +74,16 @@
     <ClCompile Include="game02\mugimendua.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game02\scene_handler.c">
+    <ClCompile Include="game02\hasierako_orrialdea.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game02\scene2.c">
+    <ClCompile Include="game02\mapa.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game02\selfie.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="amaiera.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,14 +1,10 @@
-#include <SDL.h> // Proporciona funcionalidades básicas de SDL.
-#include <SDL_image.h> // Extensión de SDL para cargar imágenes en varios formatos.
-#include <stdio.h> // Entrada y salida estándar.
-#include <stdbool.h> // Encabezado que proporciona el tipo de datos bool y los valores true y false.
 #include "selfie.h"
-#include "helpers.h"
 
 SDL_Texture* SELFIE_goikoTexturak[ANIMALIA_KOPURUA];
 enum Animalia SELFIE_goikoAnimaliak[ANIMALIA_KOPURUA];
 int SELFIE_goikoTexturakKopurua = 0;
 
+//selfie-en irudiak kargatzeko balio duen funtzioa
 SDL_Texture* SELFIE_irudiaKargatu(enum Animalia animalia, SDL_Renderer* renderer)
 {
     SDL_Texture* irudia;
@@ -46,7 +42,7 @@ SDL_Texture* SELFIE_irudiaKargatu(enum Animalia animalia, SDL_Renderer* renderer
     return irudia;
 }
 
-
+//Goian karratu moduan selfie-ak marrazten dituen funtzioa
 void SELFIE_goikoSelfieakMarraztu(SDL_Renderer* renderer)
 {
     int i;
@@ -62,7 +58,7 @@ void SELFIE_goikoSelfieakMarraztu(SDL_Renderer* renderer)
     }
 }
 
-
+//Animali batekin selfie-a eginda dagoen ala ez bueltatzen duen funtzioa
 int SELFIE_eginda(enum Animalia animalia)
 {
     int i = 0;
@@ -78,7 +74,7 @@ int SELFIE_eginda(enum Animalia animalia)
     return badago;
 }
 
-
+//Selfie-ak ateratzeko gestioak egiten dituen funtzioak: eginda al dagoen ala ez ikusi, mezua bidali.
 void SELFIE_main(SDL_Renderer* renderer, enum Animalia animalia)
 {
     SDL_Texture* texture = SELFIE_irudiaKargatu(animalia, renderer);

@@ -1,5 +1,6 @@
 #include "dialogoak_kargatu.h"
 
+//Hurrengo karakterea lerroaren amaiera den ala ez detektatu eta bueltatzen du
 int DIALOGOAK_karaktereaHartu(char* karakterea, FILE* fitxategia)
 {
 	int ret;
@@ -23,6 +24,7 @@ int DIALOGOAK_karaktereaHartu(char* karakterea, FILE* fitxategia)
 	return ret;
 }
 
+//> eta < arteko espazioa sahiesten du lerroaren lehen karakterea lortzeko
 int DIALOGOAK_lehenKaraktereaHartu(char* karakterea, FILE* fitxategia)
 {
 	int c; // EOF can only be detected before fgetc is cast to char.
@@ -35,6 +37,7 @@ int DIALOGOAK_lehenKaraktereaHartu(char* karakterea, FILE* fitxategia)
 	return c != EOF;
 }
 
+//Lerro amaierararte esaldi bat irakurtzen duen funtzioa
 int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia)
 {
 	// 1 bueltatzen du string osoa n karakteretan sartu bada.
@@ -63,40 +66,7 @@ int DIALOGOAK_stringIrakurri(char string[], int n, FILE* fitxategia)
 	return ondo;
 }
 
-int DIALOGOAK_arrayInizializatuFitxategitik(struct Dialogo* arr[], int maxLength, int* aukera, FILE* fitxategia)
-{
-	char oraingoa;
-
-	DIALOGOAK_lehenKaraktereaHartu(&oraingoa, fitxategia);
-	*aukera = 0;
-
-	int success = 1;
-
-	do
-	{
-		if (oraingoa == '{')
-		{
-			if (*aukera >= maxLength)
-			{
-				success = 0;
-			}
-			else
-			{
-				success = DIALOGOAK_inizializatuFitxategitik(&arr[*aukera], fitxategia);
-				++*aukera;
-			}
-		}
-		else
-		{
-			success = 0;
-		}
-
-		if (success) success = DIALOGOAK_lehenKaraktereaHartu(&oraingoa, fitxategia);
-	} while (oraingoa != ']' && success);
-
-	return success;
-}
-
+//Fitxategi batetik dialogoaren edukia kargatzen duen funtzioa
 int DIALOGOAK_inizializatuFitxategitik(struct Dialogo** dialogo, FILE* fitxategia)
 {
 	char izena[DIALOGO_MAX_STR_LEN + 1] = "";
@@ -144,10 +114,10 @@ int DIALOGOAK_inizializatuFitxategitik(struct Dialogo** dialogo, FILE* fitxategi
 	return ondo;
 }
 
-
+//Path batetik dialogoaren edukia kargatzen duen funtzioa
 int DIALOGOAK_inizializatuPathBatetik(struct Dialogo** dialogo, char* path)
 {
-	FILE* fitxategia = fitxategiaIrakurtzekoIreki(path);
+	FILE* fitxategia = fitxategiaIrakurtzekoIreki(path); // Path-aren fitxategia zabaltzen du goiko funtzioari deitzeko
 	char first;
 
 	int ondo = DIALOGOAK_lehenKaraktereaHartu(&first, fitxategia);
@@ -161,6 +131,7 @@ int DIALOGOAK_inizializatuPathBatetik(struct Dialogo** dialogo, char* path)
 	return ondo;
 }
 
+//Animali bakoitzaren dialogoa hasieratzen dituzten funtzioak:
 
 void DIALOGO_inizializatuAxolote(struct Dialogo** dialogo)
 {

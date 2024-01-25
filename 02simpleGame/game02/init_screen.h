@@ -3,14 +3,14 @@
 
 #include <SDL.h>
 
-#include "scene_handler.h"
+#include "hasierako_orrialdea.h"
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "scene2.h"
+#include "mapa.h"
 
-void Hasieratu(SDL_Window** lehioa, SDL_Surface** superficie);
+void Hasieratu(SDL_Window** leihoa, SDL_Surface** superficie);
 // Bi ** aldagai puntero baten definizioa delako
 
 

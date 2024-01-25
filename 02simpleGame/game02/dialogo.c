@@ -1,5 +1,6 @@
 #include "dialogo.h"
 
+//Dialogoa sortzeko balio duen funtzioa
 struct Dialogo* DIALOGO_sortu(char izena[], char dialogoa[], struct Dialogo* aukerak[], int aukerakKop)
 {
 	// struct Dialogo bat malloc gabe sortuko banu, funtzioa amaitzerakoan suntsitua izango litzateke.
@@ -21,6 +22,7 @@ struct Dialogo* DIALOGO_sortu(char izena[], char dialogoa[], struct Dialogo* auk
 	return dialogo;
 }
 
+//Egindako dialogo batek memoria ez okupatzeko balio duen funtzioa
 void DIALOGO_ezabatu(struct Dialogo* dialogo)
 {
 	int aukera;
@@ -31,6 +33,7 @@ void DIALOGO_ezabatu(struct Dialogo* dialogo)
 	free(dialogo);
 }
 
+//Dialogoan hurrengoko aukerara pasatzeko balio duen funtzioa
 void DIALOGO_aurrera(struct Dialogo** dialogo, int aukera)
 {
 	ERRORIF(aukera >= (*dialogo)->aukerakKop, "DIALOGO_aurrera funtziora pasatu den aukera handiegia da.");
@@ -38,6 +41,7 @@ void DIALOGO_aurrera(struct Dialogo** dialogo, int aukera)
 	*dialogo = (*dialogo)->aukerak[aukera];
 }
 
+//DIalogoaren ziklo nagusia
 void DIALOGO_gauzatu(struct Dialogo* dialogo, enum Animalia animalia, SDL_Renderer* renderer)
 {
 	int aukera;
@@ -49,6 +53,7 @@ void DIALOGO_gauzatu(struct Dialogo* dialogo, enum Animalia animalia, SDL_Render
 	}
 }
 
+//Dialogoa erakutsi eta bere logika azaltzen duen funtzioa
 void DIALOGO_main(enum Animalia animalia, SDL_Renderer* renderer)
 {
 	struct Dialogo* dialogo = DIALOGO_inizializatu(animalia);
@@ -60,7 +65,7 @@ void DIALOGO_main(enum Animalia animalia, SDL_Renderer* renderer)
 	SELFIE_main(renderer, animalia);
 }
 
-
+//Dialogoa hasieratzen duen funtzioa
 struct Dialogo* DIALOGO_inizializatu(enum Animalia animalia)
 {
 	struct Dialogo* dialogo = 0;

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="amaiera.h" />
     <ClInclude Include="game02\dialogo.h" />
     <ClInclude Include="game02\dialogoak_kargatu.h" />
     <ClInclude Include="game02\dialogo_grafiko.h" />
@@ -26,11 +27,12 @@
     <ClInclude Include="game02\helpers.h" />
     <ClInclude Include="game02\init_screen.h" />
     <ClInclude Include="game02\mugimendua.h" />
-    <ClInclude Include="game02\scene2.h" />
-    <ClInclude Include="game02\scene_handler.h" />
+    <ClInclude Include="game02\mapa.h" />
+    <ClInclude Include="game02\hasierako_orrialdea.h" />
     <ClInclude Include="game02\selfie.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="amaiera.c" />
     <ClCompile Include="game02\dialogo.c" />
     <ClCompile Include="game02\dialogoak_kargatu.c" />
     <ClCompile Include="game02\dialogo_grafiko.c" />
@@ -39,8 +41,8 @@
     <ClCompile Include="game02\init_screen.c" />
     <ClCompile Include="game02\main.c" />
     <ClCompile Include="game02\mugimendua.c" />
-    <ClCompile Include="game02\scene2.c" />
-    <ClCompile Include="game02\scene_handler.c" />
+    <ClCompile Include="game02\mapa.c" />
+    <ClCompile Include="game02\hasierako_orrialdea.c" />
     <ClCompile Include="game02\selfie.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

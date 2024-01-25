@@ -4,6 +4,9 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include "selfie.h"
+#include "helpers.h"
 
 #define SELFIE_TIEMPO_MUESTRA 2000
 

@@ -9,18 +9,10 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <stdio.h>
+#include "helpers.h"
 
-
-
-extern int kanpo;
-extern SDL_Rect pertsonaia;
-extern int bertako_pertsonaia;
-extern int bertako_pertsonaia_i;
-extern int lehiozabalera;
-extern int lehioaltuera;
 extern const char* imagenes[NUM_DIRECCIONES][NUM_IMAGENES];
 
-void cleanUp(SDL_Surface* pertsonaia_argazkia[NUM_DIRECCIONES][NUM_IMAGENES], SDL_Surface* backgroundSurface);
-void pertsonaiaMugitu(SDL_Window* lehioa, SDL_Surface* superficie, SDL_Rect* pertsonaia, int* bertako_pertsonaia, int* bertako_pertsonaia_i, int* kanpo, int lehiozabalera, int lehioaltuera, const Uint8* keyboardState);
+void pertsonaiaMugitu(SDL_Window* leihoa, SDL_Surface* superficie, SDL_Rect* pertsonaia, int* bertako_pertsonaia, int* bertako_pertsonaia_i, const Uint8* keyboardState);
 
 #endif

@@ -1,5 +1,6 @@
 #include "dialogo_grafiko.h"
 
+//Dialogoa pantailan erakusten duen funtzioa
 int DIALOGO_erakutsi(struct Dialogo* dialogo, enum Animalia animalia, SDL_Renderer* renderer)
 {
     int aukera;
@@ -20,6 +21,7 @@ int DIALOGO_erakutsi(struct Dialogo* dialogo, enum Animalia animalia, SDL_Render
     return aukera;
 }
 
+//Dialogorako irudiak kargatzen dituen funtzioa
 void DIALOGO_GRAFIKO_animaliaIrudiaKargatu(enum Animalia animalia, SDL_Texture** ahoIrekia, SDL_Texture** ahoItxia, SDL_Renderer* renderer)
 {
     switch (animalia)
@@ -61,12 +63,14 @@ void DIALOGO_GRAFIKO_animaliaIrudiaKargatu(enum Animalia animalia, SDL_Texture**
     }
 }
 
+//Animalia dialogorako marrazten duen funtzioa
 void DIALOGO_GRAFIKO_animaliaMargotu(SDL_Renderer* renderer, SDL_Texture* texture)
 {
     SDL_Rect rect = { 300, 75, 300, 300 };
     SDL_RenderCopy(renderer, texture, NULL, &rect);
 }
 
+//Dialogoa behin marrazten duen funtzioa
 void DIALOGO_GRAFIKO_dialogoaIdatzi(SDL_Renderer* renderer, int x, int y, int w, TTF_Font* font, char string[])
 {
 
@@ -85,17 +89,19 @@ void DIALOGO_GRAFIKO_dialogoaIdatzi(SDL_Renderer* renderer, int x, int y, int w,
     SDL_DestroyTexture(texture);
 }
 
+//Animaliaren dialogoa idatzi
 void DIALOGO_GRAFIKO_animaliarenDialogoaIdatzi(SDL_Renderer* renderer, TTF_Font* font, char string[])
 {
     DIALOGO_GRAFIKO_dialogoaIdatzi(renderer, 40, 100, 220, font, string);
 }
 
+//Jokalariaren dialogoa idatzi
 void DIALOGO_GRAFIKO_aukerakIdatzi(SDL_Renderer* renderer, TTF_Font* font, char string[])
 {
     DIALOGO_GRAFIKO_dialogoaIdatzi(renderer, 40, 400, 520, font, string);
 }
 
-
+//Letraz letra animaliaren dialogoa behin eta berriz idazten duen funtzioa
 void DIALOGO_GRAFIKO_dialogoErakutsi(struct Dialogo* dialogo, SDL_Texture* ahoIrekia, SDL_Texture* ahoItxia, SDL_Renderer* renderer, TTF_Font* font)
 {
     int i, stringLength;
@@ -118,7 +124,7 @@ void DIALOGO_GRAFIKO_dialogoErakutsi(struct Dialogo* dialogo, SDL_Texture* ahoIr
     }
 }
 
-
+//Letraz letra jokalariaren dialogoa behin eta berriz idazten duen funtzioa
 void DIALOGO_GRAFIKO_aukerakErakutsi(struct Dialogo* dialogo, SDL_Texture* ahoItxia, SDL_Renderer* renderer, TTF_Font* font)
 {
     char aukerak[(DIALOGO_MAX_STR_LEN + 4) * DIALOGO_MAX_AUKERAK + 1] = "";
@@ -148,6 +154,7 @@ void DIALOGO_GRAFIKO_aukerakErakutsi(struct Dialogo* dialogo, SDL_Texture* ahoIt
     }
 }
 
+//Jokalariaren aukerari itxaroten dion funtzioa
 int DIALOGO_GRAFIKO_itxaronZenbaki(int aukerak)
 {
     int zenbaki = 0;

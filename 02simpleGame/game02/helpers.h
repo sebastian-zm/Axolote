@@ -42,13 +42,13 @@ enum Animalia
 
 
 SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path);
-SDL_Surface* irudiaKargatuGainazalera(char* path);
+SDL_Surface* irudiaKargatuGainazalera(const char* path);
 SDL_Texture* texturaGainazaletik(SDL_Renderer* renderer, SDL_Surface* surface);
 TTF_Font* letraTipoKargatu(int tamaina, char* path);
 FILE* fitxategiaIrakurtzekoIreki(char* path);
 void pantailaGarbitu(SDL_Renderer* renderer);
 void fadeIn(SDL_Renderer* renderer, SDL_Texture* texture, int tiempo);
-char* pathAbsolutua(char* path);
+char* pathAbsolutua(const char* path);
 void handleQuitEvent(SDL_Event e);
 void handleQuit();
 void pantailaEguneratuEstalkiekin(SDL_Renderer* renderer);

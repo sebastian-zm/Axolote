@@ -1,6 +1,6 @@
 #include "helpers.h"
 
-// Carga una textura desde un archivo de imagen usando SDL_image.
+// SDL_image erabiliz irudi bat kargatzen da textura batera
 SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path)
 {
     SDL_Texture* texture;
@@ -13,7 +13,8 @@ SDL_Texture* irudiaKargatuTexturara(SDL_Renderer* renderer, char* path)
     return texture;
 }
 
-SDL_Surface* irudiaKargatuGainazalera(char* path)
+// SDL_image erabiliz irudi bat kargatzen da gainazal batera
+SDL_Surface* irudiaKargatuGainazalera(const char* path)
 {
     SDL_Surface* surface;
 
@@ -28,7 +29,7 @@ SDL_Surface* irudiaKargatuGainazalera(char* path)
     return surface;
 }
 
-
+//azalera baten bitartez textura bat sortzen du
 SDL_Texture* texturaGainazaletik(SDL_Renderer* renderer, SDL_Surface* surface)
 {
 
@@ -39,6 +40,7 @@ SDL_Texture* texturaGainazaletik(SDL_Renderer* renderer, SDL_Surface* surface)
     return texture;
 }
 
+//letra mota bat kargatzen duen funtzioa (.ttf path bat behar du)
 TTF_Font* letraTipoKargatu(int tamaina, char* path)
 {
     TTF_Font* font;
@@ -54,6 +56,7 @@ TTF_Font* letraTipoKargatu(int tamaina, char* path)
     return font;
 }
 
+// fitxategi baten testua zabaltzen duen funtzioa
 FILE* fitxategiaIrakurtzekoIreki(char* path)
 {
     char* fullPath = pathAbsolutua(path);
@@ -67,6 +70,7 @@ FILE* fitxategiaIrakurtzekoIreki(char* path)
     return fitxategia;
 }
 
+//beltzez pantaila marrazten duen funtzioa
 void pantailaGarbitu(SDL_Renderer* renderer)
 {
     // Marrazteko kolorea beltzera ezarri
@@ -76,7 +80,7 @@ void pantailaGarbitu(SDL_Renderer* renderer)
     SDL_RenderClear(renderer);
 }
 
-// Realiza un efecto de fundido para una textura dada durante un tiempo específico.
+// "Fade" efektu bat ezartzen du denbora batez
 void fadeIn(SDL_Renderer* renderer, SDL_Texture* texture, int tiempo)
 {
     int startTime = SDL_GetTicks();
@@ -89,6 +93,7 @@ void fadeIn(SDL_Renderer* renderer, SDL_Texture* texture, int tiempo)
         alpha = (currentTime * 255) / tiempo;
         alpha = (alpha > 255) ? 255 : alpha;
 
+        pantailaGarbitu(renderer);
         SDL_SetTextureAlphaMod(texture, alpha);
 
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, alpha);
@@ -100,7 +105,8 @@ void fadeIn(SDL_Renderer* renderer, SDL_Texture* texture, int tiempo)
     }
 }
 
-char* pathAbsolutua(char* path)
+//path relatibo bat path absolutu baten bihurtzeko funtzioa
+char* pathAbsolutua(const char* path)
 {
     char* base = SDL_GetBasePath();
     int baseLen = strlen(base);
@@ -116,6 +122,7 @@ char* pathAbsolutua(char* path)
     return fullPath;
 }
 
+//handleQuit barne doan funtzioa
 void handleQuitEvent(SDL_Event e)
 {
     if (e.type == SDL_QUIT)
@@ -126,6 +133,7 @@ void handleQuitEvent(SDL_Event e)
     }
 }
 
+//X-ari eman ezgero programa amaitzeko balio duen funtzioa
 void handleQuit()
 {
     SDL_Event e;
@@ -137,17 +145,20 @@ void handleQuit()
     }
 }
 
+//Selfie-en miniatura goiko partean marrazteko mezua bidaltzen duen funtzioa
 void estalkiakMargotu(SDL_Renderer* renderer)
 {
     SELFIE_goikoSelfieakMarraztu(renderer);
 }
 
+//Render bat erabiliz pantaila selfie-ekin eguneratzeko balio duen funtzioa
 void pantailaEguneratuEstalkiekin(SDL_Renderer* renderer)
 {
     estalkiakMargotu(renderer);
     SDL_RenderPresent(renderer);
 }
 
+//Window eta surface erabiliz pantaila selfie-ekin eguneratzeko balio duen funtzioa
 void pantailaEguneratuEstalkiekinGainazala(SDL_Window* window, SDL_Surface* surface)
 {
     SDL_Renderer* renderer = SDL_GetRenderer(window);
@@ -155,4 +166,5 @@ void pantailaEguneratuEstalkiekinGainazala(SDL_Window* window, SDL_Surface* surf
     SDL_RenderCopy(renderer, texture, NULL, NULL);
     estalkiakMargotu(renderer);
     SDL_RenderPresent(renderer);
+    SDL_DestroyTexture(texture);
 }
